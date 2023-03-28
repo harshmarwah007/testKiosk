@@ -4,4 +4,4 @@ import MainFrame from "./MainFrame";
 import Navbar from "./Navbar";
 import RightSideBar from "./RightSideBar";
 
-export { Footer, LeftSideBar, MainFrame, Navbar, RightSideBar };
+export default { Footer, LeftSideBar, MainFrame, Navbar, RightSideBar };
