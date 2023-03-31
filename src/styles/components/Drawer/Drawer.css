@@ -1,0 +1,154 @@
+.containorDrawer {
+  position: fixed;
+  width: 100%;
+  background-color: var(--red);
+  z-index: 100;
+  bottom: 0;
+  border-radius: 50px 50px 0px 0px;
+  overflow-y: scroll;
+}
+/* hide the scrollbar */
+.containorDrawer::-webkit-scrollbar {
+  display: none;
+}
+.containorBackButton {
+  width: 100%;
+  height: 80px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.arrow {
+  font-size: 30px;
+  font-weight: 500;
+}
+.productImage {
+  width: 100%;
+  max-height: 100px;
+
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.productImage img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.containorInfoProduct {
+  width: 100%;
+  max-height: 400px;
+  margin: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+.containorInfoProduct h2,
+.containorInfoProduct p {
+  margin: 5px 0px 5px 0px;
+}
+.containorInfoProduct h2 {
+  font-weight: 700;
+  font-size: 30px;
+}
+.containorInfoProduct p {
+  font-weight: 700;
+  font-size: 25px;
+  color: var(--yellow);
+}
+.containorQuantity {
+  width: 100%;
+  margin: 30px;
+  height: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttonIncrement,
+.buttonDecrement {
+  padding: 20px 30px 20px 30px;
+
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: var(--yellow);
+  color: var(--red);
+}
+.quantity {
+  color: white;
+  font-size: 20px;
+  margin: 0px 20px 0px 20px;
+}
+
+.buttonMore {
+  width: 100%;
+  margin: 30px;
+  height: 140px;
+  margin-bottom: 20px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+.buttonMore button {
+  margin: 15px;
+  padding: 50px 40px 50px 40px;
+  /* color: white; */
+  border: none;
+  font-weight: 600;
+  border-radius: 30px;
+}
+.button1 {
+  background-color: var(--redBackgroundDiscount);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+}
+.button2 {
+  background-color: var(--yellow);
+  color: var(--red);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.combo {
+  width: 100%;
+  padding: 20px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containorCombo {
+  width: 50%;
+  height: 150px;
+  background-color: var(--redBackgroundDiscount);
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerContainorCombo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px 0px 20px;
+}
+.headerCombo {
+  padding: 0px 50px 0px 50px;
+}
+.headerCombo h2 {
+  color: white;
+  font-size: 25px;
+}
