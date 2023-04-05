@@ -1,6 +1,6 @@
 .chooseOption {
   height: 100vh;
-  background-color: red;
+  background-color: var(--main-Color);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -9,26 +9,57 @@
 
 .middleContent {
   width: 60%;
-  height: 90%;
-  background-color: var(--yellow);
-  transition: ease-in;
-  animation: 0.5s middle infinite;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-@keyframes middle {
-  0% {
-    transform: rotate(50deg);
-  }
-  50% {
-    width: 40%;
-    height: 30%;
-  }
+.logoChoose {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logoChooseImage {
+  width: 125px;
+  height: 125px;
 
-  75% {
-    background-color: var(--red);
-  }
+  object-fit: contain;
+}
+.logoChooseImage img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
 
-  100% {
-    transform: rotate(0deg);
-  }
+.headerChoose {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headerChoose h1 {
+  font-size: 35px;
+  font-weight: 800;
+  color: #465469;
+  text-decoration: none;
+}
+.orderTypes {
+  width: 100%;
+  min-height: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.firstChoose {
+  width: 250px;
+  height: 300px;
+  background-color: #62748d;
+  margin: 10px;
 }

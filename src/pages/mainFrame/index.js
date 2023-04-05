@@ -4,4 +4,4 @@ import MainFrame from "./MainFrame";
 // import Navbar from "./Navbar";
 // import RightSideBar from "./RightSideBar";
 
-export { MainFrame };
+export { MainFrame } from 
