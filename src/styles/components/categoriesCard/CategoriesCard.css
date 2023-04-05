@@ -1,6 +1,6 @@
 .categoriesCard {
-  width: 190px;
-  height: 190px;
+  width: 175px;
+  height: 200px;
   border-radius: 10px;
   padding: 10px 10px 10px 10px;
   object-fit: contain;
@@ -35,7 +35,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
 }
 .containorInfo h3 {
   font-weight: 700;
@@ -55,5 +54,21 @@
 }
 .discount p {
   font-size: 12px;
+  font-weight: 700;
+}
+
+/* CSs for the price cards */
+.containorPriceInfo {
+  width: 100px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  margin: 8px 0px 8px 0px;
+  
+}
+.containorPriceInfo h4{
+  color: black;
   font-weight: 700;
 }

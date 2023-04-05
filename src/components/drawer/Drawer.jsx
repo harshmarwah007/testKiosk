@@ -4,19 +4,31 @@ import { motion } from "framer-motion";
 //import css
 import "../../styles/components/Drawer/Drawer.css";
 import { HiChevronLeft } from "react-icons/hi";
+// import {CustomizeCard} from "../../components";
+import CustomizeCard from "../productCards/customizeCards/CustomizeCard";
 
-const Drawer = () => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+const Drawer = (props) => {
+  const [openCustomize, setOpenCustomize] = useState(false);
+  //open the customize tab
+  const openCustomizeTab = () => {
+    setOpenCustomize(!openCustomize);
+    console.log(openCustomize);
+  };
+
+  //close the customizations
+  const closeCustomizeTab = () => {
+    setOpenCustomize(false);
+  };
+
   return (
     <motion.div
       initial={{
         y: -100,
       }}
-      onClick={() => setIsDrawerOpen(!isDrawerOpen)}
       animate={{
         y: 0,
         // opacity: isDrawerOpen ? 1 : 0.1,
-        height: isDrawerOpen ? "80%" : "5%",
+        height: props.drawer ? "70%" : "0",
 
         transition: {
           duration: 0,
@@ -27,44 +39,274 @@ const Drawer = () => {
       }}
       className="containorDrawer"
     >
-      <div className="containorBackButton">
-        <HiChevronLeft className="arrow" />
-      </div>
-      <div className="productImage">
-        <div className="image">
-          <img
-            src="https://mcdindia.com/wp-content/uploads/2023/01/veg-surprise-burger-1.png"
-            alt=""
+      {/* <div className="buttonsDrawer">
+        <button>Proceed</button>
+      </div> */}
+      {/* Wrapper to hide and show the containor */}
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: props.drawer ? 1 : 0,
+        }}
+        className="wrapper"
+      >
+        <div className="containorBackButton">
+          <HiChevronLeft
+            onClick={() => {
+              props.setDrawer(false);
+              closeCustomizeTab();
+            }}
+            className="arrow"
           />
         </div>
-      </div>
-      <div className="containorInfoProduct">
-        <h2>Big Mac</h2>
-        <p>$3.78</p>
-        <div className="containorQuantity">
-          <div className="buttonIncrement">+</div>
-          <div className="quantity">1</div>
-          <div className="buttonDecrement">-</div>
-        </div>
-      </div>
+        <motion.div
+          animate={{
+            y: openCustomize ? -10 : 0,
 
-      <div className="buttonMore">
-        <button className="button1">Customize</button>
-        <button className="button2">Done</button>
-      </div>
-
-      <div className="combo">
-        <div className="containorCombo">
-          <div className="headerCombo">
-            <h2>
-              Combo <br /> Meal
-            </h2>
+            transition: {
+              duration: 0.2,
+              type: "spring",
+              stiffness: 90,
+              damping: 10,
+            },
+          }}
+          className="productImage"
+        >
+          <div className="image">
+            <motion.img
+              animate={{
+                height: openCustomize ? "100px" : "200px",
+                width: openCustomize ? "100px" : "200px",
+                transition: {
+                  duration: 0.2,
+                  type: "spring",
+                  stiffness: 80,
+                  damping: 15,
+                },
+              }}
+              src="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/CKMHMC-2754-1-2754.png"
+              alt=""
+            />
           </div>
-          <div className="containorPriceInfo">
-            
+          <div className="containorInfoProduct1">
+            <motion.h2
+              animate={{
+                fontSize: openCustomize ? "1.5rem" : "2rem",
+              }}
+              className="headingProductDrawer"
+            >
+              Big Mac
+            </motion.h2>
+            <motion.p
+              animate={{
+                fontSize: openCustomize ? "1.3rem" : "2rem",
+              }}
+            >
+              $3.78
+            </motion.p>
+          </div>
+        </motion.div>
+        <motion.div
+          animate={{
+            display: openCustomize ? "none" : "",
+          }}
+          className="containorInfoProduct"
+        >
+          <div className="containorQuantity">
+            <div className="buttonIncrement">+</div>
+            <div className="quantity">1</div>
+            <div className="buttonDecrement">-</div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          animate={{
+            display: openCustomize ? "none" : "",
+          }}
+          className="buttonMore"
+        >
+          <button
+            onClick={() => {
+              openCustomizeTab();
+            }}
+            className="button1"
+          >
+            Customize
+          </button>
+          <button className="button2">Add to Cart</button>
+        </motion.div>
+
+        {/* Containor for making the meals combo meals */}
+        <div className="comboMeals">
+          <div className="mealContainor">
+            <div className="headerComboMeals">
+              <h2>Combo Meal</h2>
+            </div>
+            <div className="containorProductInfo">
+              <div className="imagePart">
+                <img
+                  src="https://d2mn2a9fb37v58.cloudfront.net/210_MAPPFR-6448-1-6448.png"
+                  alt=""
+                />
+              </div>
+              <div className="price">$5.67</div>
+              <div
+                className="discount"
+                style={{
+                  color: "white",
+                  backgroundColor: "#c8161d",
+                }}
+              >
+                20% Off
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+
+        <motion.div
+          animate={{
+            transform: openCustomize ? "" : "translateX(100%)",
+            display: openCustomize ? "" : "none",
+            transition: {
+              duration: 0.2,
+              type: "spring",
+              stiffness: 80,
+              damping: 15,
+            },
+          }}
+          className="containorCustomize"
+        >
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+          <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          />
+
+          <div className="buttonMoreData">
+            <button
+              onClick={() => {
+                //close the customize modal
+                closeCustomizeTab();
+              }}
+            >
+              Done
+            </button>
+          </div>
+        </motion.div>
+      </motion.div>
     </motion.div>
   );
 };

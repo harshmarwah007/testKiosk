@@ -17,6 +17,9 @@ code {
   margin: 0;
   box-sizing: border-box;
 }
+button {
+  cursor: pointer;
+}
 /* Hide the scroll behavious globally  */
 ::-webkit-scrollbar {
   display: none;

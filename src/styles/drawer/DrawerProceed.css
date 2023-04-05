@@ -1,0 +1,40 @@
+.cartDrawer {
+  position: fixed;
+  bottom: 0;
+  color: black;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  background-color: var(--main-Color);
+  min-height: 100px;
+}
+
+.containorCartItems {
+  display: flex;
+  justify-content: space-between;
+  background-color: #efefef;
+  width: 80%;
+  padding: 20px;
+  display: flex;
+  justify-items: start;
+  align-items: center;
+}
+.carts {
+  width: 70%;
+  height: 100%;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: black;
+  overflow-x: scroll;
+}
+
+/* remove the scrollbar */
+.carts::-webkit-scrollbar {
+  display: none;
+}

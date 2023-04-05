@@ -2,5 +2,6 @@
 import { LoginPage } from "./loginPage";
 
 import { MainFrame } from "./mainFrame";
+import ChooseOrder from "./chooseOrder/ChooseOrder";
 
-export { LoginPage, MainFrame };
+export { LoginPage, MainFrame, ChooseOrder };

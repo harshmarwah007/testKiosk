@@ -6,7 +6,7 @@ import "../../../styles/components/categoriesCard/CategoriesCard.css";
 //import motion libarary
 import { motion } from "framer-motion";
 
-const CategoriesCard = (props) => {
+const PriceCard = (props) => {
   const [isSelectedItem, setIsSelectedItem] = useState(false);
 
   //useEffect for the sidebar drawer
@@ -74,29 +74,18 @@ const CategoriesCard = (props) => {
         <h4>{props.title}</h4>
         {/* Only  div when having the discount props  */}
 
-        {props.discount ? (
-          <motion.div
+        <motion.div className="containorPriceInfo">
+          <motion.h4
             animate={{
-              background: isSelectedItem ? "#D34549" : "#fbfbf9",
               color: isSelectedItem ? "white" : "black",
-
-              transition: {
-                duration: 0.5,
-                type: "spring",
-                stiffness: 80,
-                damping: 10,
-              },
             }}
-            className="discount"
           >
-            <p>{props.discount}</p>
-          </motion.div>
-        ) : (
-          <div className="discount"></div>
-        )}
+            ${props.price}
+          </motion.h4>
+        </motion.div>
       </motion.div>
     </motion.div>
   );
 };
 
-export default CategoriesCard;
+export default PriceCard;
