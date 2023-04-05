@@ -102,8 +102,8 @@
   padding: 20px;
   font-size: 20px;
   display: flex;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
 }
 .headingCategory h2 {
@@ -168,7 +168,7 @@
 
   overflow-y: scroll;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   padding: 10px;
