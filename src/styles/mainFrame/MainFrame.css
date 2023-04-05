@@ -53,7 +53,7 @@
 
 .banners {
   width: 100%;
-  min-height: 400px;
+  height: 400px;
   /* background: url(https://mcdonaldsblog.in/wp-content/uploads/2023/02/conversation-starters-at-McDonald-1024x552.png);
   background-size: cover;
   background-position: center center;
@@ -63,7 +63,6 @@
   align-items: center;
   background-color: "#efefef";
   border-radius: 10px;
-
 }
 .bannerPortrait {
   width: 40%;
