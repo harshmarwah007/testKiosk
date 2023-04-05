@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import Drawer from "../../components/drawer/Drawer";
+
 //importing the css
 import "../../styles/mainFrame/MainFrame.css";
 
@@ -33,7 +34,7 @@ const MainFrame = () => {
       <MainContent drawer={setIsDrawerOpen} drawerValue={isDrawerOpen} />
       <Drawer drawer={isDrawerOpen} setDrawer={setIsDrawerOpen} />
 
-      <DrawerProceed drawer={setIsDrawerOpen} />
+      <DrawerProceed drawer={setIsDrawerOpen} isDrawerOpened={isDrawerOpen} />
     </motion.div>
   );
 };

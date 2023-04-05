@@ -1,43 +1,34 @@
 .chooseOption {
-  width: 100%;
   height: 100vh;
-  background-color: var(--main-Color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.logo1 {
-  margin: 10px 0px 10px 0px;
-  width: 200px;
-  height: 200px;
-
-  object-fit: cover;
-}
-
-.logo1 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.cardsContainor {
+  background-color: red;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* flex-direction: column; */
-}
-h1 {
-  font-size: 35px;
-  font-weight: 700;
-  margin: 0px;
 }
 
-.eat-in,
-.takeaway {
-  height: 350px;
-  margin: 20px;
-  width: 300px;
-  border-radius: 15px;
-  background-color: gray;
+.middleContent {
+  width: 60%;
+  height: 90%;
+  background-color: var(--yellow);
+  transition: ease-in;
+  animation: 0.5s middle infinite;
+}
+
+@keyframes middle {
+  0% {
+    transform: rotate(50deg);
+  }
+  50% {
+    width: 40%;
+    height: 30%;
+  }
+
+  75% {
+    background-color: var(--red);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
