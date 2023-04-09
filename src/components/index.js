@@ -20,3 +20,7 @@ export { default as CtaegoriesCard } from "./productCards/categories/CategoriesC
 export { default as CustomizeCard } from "./productCards/customizeCards/CustomizeCard";
 export { default as SidebarCategoryCard } from "./productCards/sidebarCategoryCard/SidebarCard";
 export { default as Sidebar } from "./sidebar/Sidebar";
+export { default as CheckOutCard } from "./productCards/CheckOutCard/CheckOutCard";
+export { default as DrawerSide } from "./drawer/DrawerSide";
+export { default as DrawerProceed } from "./drawer/DraweProceed";
+export { default as SideCardDrawer } from "./productCards/SideCardDrawer/SideCardDrawer";

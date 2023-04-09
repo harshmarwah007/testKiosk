@@ -1,6 +1,10 @@
 .chooseOption {
   height: 100vh;
-  background-color: #efece5;
+  /* background-color: #efefef; */
+  background-image: url(https://i.pinimg.com/564x/73/72/61/737261b0143d766d6d65e49f5727ac6e.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -10,13 +14,12 @@
 }
 
 .blob {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 400px;
-  width: 1000px;
+  position: fixed;
+  top: 0;
+  width: 150rem;
   /* Make it translucent */
-  opacity: 0.4;
+  
+  opacity: 1;
 }
 
 .middleContent {
@@ -60,7 +63,7 @@
   font-size: 35px;
   animation: header 800ms backwards;
   font-weight: 800;
-  color: #ac8358;
+  color: white;
   /* color: black; */
   text-decoration: none;
 }
@@ -132,7 +135,8 @@
 }
 .secondChoose h2,
 .firstChoose h2 {
-  color: #ac8358;
+  /* color: #ac8358; */
+  color: var(--red);
 }
 
 @keyframes bodyAnimate {

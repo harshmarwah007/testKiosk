@@ -10,6 +10,13 @@ import CategoriesCard from "../../components/productCards/categories/CategoriesC
 import PriceFrame from "../../components/categoryPriceFrame/CategoryPriceFrame";
 
 const MainContent = (props) => {
+  //function to set the side drawer open for the category Card
+  const setSideDrawer = () => {
+    console.log("Hello world");
+    props.setSide(!props.side);
+    console.log(props.side);
+  };
+
   const parentVariants = {
     animate: {
       transition: {
@@ -51,8 +58,9 @@ const MainContent = (props) => {
           autoPlay
           loop
           muted
-          src="https://production-mds-assets.s3.ap-south-1.amazonaws.com/video/v1.mp4"
+          src="bannerVideos/videoplayback.webm"
         ></video>
+
         {/* Video */}
       </motion.div>
       <div className="category">
@@ -108,7 +116,11 @@ const MainContent = (props) => {
               discount="80% off"
             />
           </motion.div>
-          <motion.div variants={childVariants} className="card">
+          <motion.div
+            variants={childVariants}
+            className="card"
+            onClick={setSideDrawer}
+          >
             <CategoriesCard
               drawer={props.drawer}
               productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/CLABCK-6013-1-6013.png"
@@ -185,6 +197,7 @@ const MainContent = (props) => {
               drawer={props.drawer}
               productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
               title="Burger"
+              sides={true}
               discount="80% off"
             />
           </motion.div>

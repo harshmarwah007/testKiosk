@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+//import router
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 //import css
@@ -8,6 +10,7 @@ import { HiChevronLeft } from "react-icons/hi";
 import CustomizeCard from "../productCards/customizeCards/CustomizeCard";
 
 const Drawer = (props) => {
+  const navigate = useNavigate();
   const [openCustomize, setOpenCustomize] = useState(false);
   //open the customize tab
   const openCustomizeTab = () => {
@@ -28,7 +31,7 @@ const Drawer = (props) => {
       animate={{
         y: 0,
         // opacity: isDrawerOpen ? 1 : 0.1,
-        height: props.drawer ? "70%" : "0",
+        height: props.drawer && props.sides ? "70%" : "0",
 
         transition: {
           duration: 0,
@@ -135,7 +138,15 @@ const Drawer = (props) => {
           >
             Customize
           </button>
-          <button className="button2">Add to Cart</button>
+          <button
+            className="button2"
+            onClick={() => {
+              props.setDrawer(false);
+              navigate("/checkOut");
+            }}
+          >
+            Add to Cart
+          </button>
         </motion.div>
 
         {/* Containor for making the meals combo meals */}

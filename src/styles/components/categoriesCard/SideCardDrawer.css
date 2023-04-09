@@ -1,0 +1,55 @@
+.SideCardDrawer {
+  min-height: 195px;
+  min-width: 195px;
+  background-color: var(--main-Color);
+  border-radius: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.image_SideCardDrawer {
+  height: 70%;
+
+  width: 100%;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.circularImageContainor_SideCardDrawer {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.circularImageContainor_SideCardDrawer > img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.info_SideCardDrawer {
+  height: 30%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+.info_SideCardDrawer > h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--black);
+}
+.info_SideCardDrawer > p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--yellow);
+}

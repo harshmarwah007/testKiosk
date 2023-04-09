@@ -9,3 +9,4 @@
 export { default as LoginPage } from "./loginPage/LoginPage";
 export { default as ChooseOrder } from "./chooseOrder/ChooseOrder";
 export { default as MainFrame } from "./mainFrame/MainFrame";
+export { default as CheckOut } from "./mainFrame/CheckOut";

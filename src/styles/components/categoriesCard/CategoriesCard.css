@@ -66,9 +66,87 @@
   align-items: center;
   cursor: pointer;
   margin: 8px 0px 8px 0px;
-  
 }
-.containorPriceInfo h4{
+.containorPriceInfo h4 {
   color: black;
   font-weight: 700;
 }
+
+/* media queries for the price cards */
+/* @media screen and (max-width: 1300px) {
+  .categoriesCard {
+    width: 125px;
+    height: 150px;
+    border-radius: 10px;
+    padding: 5px 5px 5px 5px;
+    object-fit: contain;
+    margin: 7px;
+    background-color: var(--gray);
+  }
+  .categoriesCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .containorImage {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; */
+/* margin: 7px 0px 7px 0px; */
+/* }
+  .containorImage img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .containorInfo {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .containorInfo h4 {
+    font-weight: 700;
+    margin: 0px;
+    font-size: 11px;
+  }
+
+  .discount {
+    width: 70px;
+    height: 20px;
+    border-radius: 30px;
+    background-color: #efefef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    margin: 8px 0px 8px 0px;
+  }
+  .discount p {
+    font-size: 9px;
+    font-weight: 700;
+  } */
+
+/* CSs for the price cards */
+/* .containorPriceInfo {
+    width: 100px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    margin: 8px 0px 8px 0px;
+  }
+  .containorPriceInfo h4 {
+    color: black;
+    font-weight: 700;
+  }
+} */

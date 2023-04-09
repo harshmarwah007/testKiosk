@@ -4,7 +4,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //destructure this
-import { LoginPage, MainFrame, ChooseOrder } from "./pages/index";
+import { LoginPage, MainFrame, ChooseOrder, CheckOut } from "./pages/index";
 
 //motion Animate Presence
 import { AnimatePresence } from "framer-motion";
@@ -17,6 +17,7 @@ const App = () => {
           <Route path="/" element={<LoginPage />} />
           <Route path="/mainFrame" element={<MainFrame />} />
           <Route path="/chooseOrder" element={<ChooseOrder />} />
+          <Route path="/checkout" element={<CheckOut />} />
           <Route path="*" element={<h1>404</h1>} />
         </Routes>
       </AnimatePresence>

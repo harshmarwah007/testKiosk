@@ -1,0 +1,148 @@
+.checkOut {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: flex-start;
+  /* background-color: #2b7b3b; */
+  background-color: var(--main-Color);
+  align-items: center;
+  color: black;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.backAndLanguage {
+  width: 80%;
+  height: 100px;
+  color: black;
+  padding: 20px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.goBack {
+  display: flex;
+
+  height: 50px;
+  min-width: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+.checkOutLogo {
+  width: 100%;
+  margin: 40px 0px 40px 0px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageCheckOut {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+.imageCheckOut img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.checkOutOrders {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 10 00px;
+  overflow-y: scroll;
+}
+
+/* Hide scroll bar */
+.checkOutOrders::-webkit-scrollbar {
+  display: none;
+}
+.checkOutOrderType {
+  margin: 20px 0px 20px 0px;
+  padding: 30px;
+  width: 80%;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.checkOutOrderType h1 {
+  font-size: 55px;
+  font-weight: 800;
+
+  color: black;
+}
+.checkOutOrderType p {
+  font-size: 20px;
+  color: black;
+  display: flex;
+}
+
+.priceCheckOut {
+  width: 100%;
+  position: fixed;
+
+  bottom: 0;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  /* background-color: #21652f; */
+  background-color: #efefef;
+  align-items: center;
+  padding: 20px;
+}
+.totalCheckOut {
+  display: flex;
+  height: 100%;
+  width: 200px;
+  padding-left: 30px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.totalCheckOut h4 {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+}
+.totalCheckOut h3 {
+  color: black;
+  font-size: 40px;
+  text-align: left;
+}
+.containorButton {
+  width: 200px;
+  min-height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkOut1 {
+  padding: 50px 70px 50px 70px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  background-color: var(--yellow);
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+}
+.wrapperPriceCheckOut {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
