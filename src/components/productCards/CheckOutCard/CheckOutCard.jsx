@@ -13,14 +13,20 @@ const CheckOutCard = () => {
           />
         </div>
         <div className="infoCheckout">
-          <h2>McVeggie</h2>
-          <p>$3.79</p>
+          <h3>McVeggie</h3>
+          <p
+            style={{
+              fontSize: "12px",
+            }}
+          >
+            $3.79
+          </p>
         </div>
       </div>
       <div className="quantityCheckout">
         <button className="buttonIncrement1">+</button>
         <div className="quantity3">
-            <p>1</p>
+          <p>1</p>
         </div>
         <button className="buttonDecrement1">-</button>
       </div>

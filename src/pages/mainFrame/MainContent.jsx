@@ -78,6 +78,7 @@ const MainContent = (props) => {
             },
             transitionDelay: 2.5,
           }}
+          t
           //delay for 2 second
 
           className="headingCategory"
@@ -123,7 +124,7 @@ const MainContent = (props) => {
           >
             <CategoriesCard
               drawer={props.drawer}
-              productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/CLABCK-6013-1-6013.png"
+              productImage="https://d2mn2a9fb37v58.cloudfront.net/90_MENU-4611-1-Sides-and-Dips.png"
               title="Cheese Burger"
               discount="80% off"
             />

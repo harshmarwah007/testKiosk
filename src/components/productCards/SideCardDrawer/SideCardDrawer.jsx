@@ -22,7 +22,7 @@ const SideCardDrawer = (props) => {
         <motion.div
           whileTap={{ scale: 0.9, rotate: 360, transition: { duration: 0.5 } }}
           animate={{
-            backgroundColor: clicked ? "#c8161d" : props.backgroundColor,
+            backgroundColor: clicked ? "#efefef" : props.backgroundColor,
 
             transition: {
               duration: 0.5,

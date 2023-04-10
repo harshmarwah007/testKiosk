@@ -10,6 +10,8 @@
   color: black;
   padding: 20px;
   flex-direction: column;
+  padding-bottom: 200px;
+  position: relative;
 }
 
 .backAndLanguage {
@@ -43,8 +45,8 @@
   align-items: center;
 }
 .imageCheckOut {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
 }
 .imageCheckOut img {
@@ -59,7 +61,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  height: 10 00px;
+  min-height: 500px;
   overflow-y: scroll;
 }
 
@@ -78,13 +80,13 @@
   flex-direction: column;
 }
 .checkOutOrderType h1 {
-  font-size: 55px;
+  font-size: 35px;
   font-weight: 800;
 
   color: black;
 }
 .checkOutOrderType p {
-  font-size: 20px;
+  font-size: 16px;
   color: black;
   display: flex;
 }
@@ -112,13 +114,13 @@
   flex-direction: column;
 }
 .totalCheckOut h4 {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 400;
   text-align: left;
 }
 .totalCheckOut h3 {
   color: black;
-  font-size: 40px;
+  font-size: 30px;
   text-align: left;
 }
 .containorButton {
@@ -130,12 +132,12 @@
   align-items: center;
 }
 .checkOut1 {
-  padding: 50px 70px 50px 70px;
+  padding: 40px 60px 40px 60px;
   border-radius: 30px;
   outline: none;
   border: none;
   background-color: var(--yellow);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: black;
 }
@@ -145,4 +147,99 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+}
+
+.recommendations {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.wrapperRecommendations {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.wrapperRecommendations > h1 {
+  font-size: 20px;
+  padding: 20px;
+  font-weight: 800;
+}
+
+.recommendations_Scrollable {
+  width: 100%;
+  min-height: 200px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-x: scroll;
+}
+/* Hide the scrollbar  */
+.recommendations_Scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+.promoCode {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.wrapperPromoCode {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.promoCodeInput {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.promoCodeInput input {
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px 10px 10px;
+  background-color: var(--main-Color);
+
+  outline: none;
+  border: none;
+  /* Dashed Border  */
+  border: 1px dashed rgb(107, 107, 107);
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+}
+.promoCodeButton {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.promoCodeButton button {
+  width: 100%;
+  height: 80px;
+  outline: none;
+  border: none;
+  background-color: var(--yellow);
+  font-size: 15px;
+  font-weight: 600;
+  color: black;
+  margin-top: 20px;
 }

@@ -24,3 +24,4 @@ export { default as CheckOutCard } from "./productCards/CheckOutCard/CheckOutCar
 export { default as DrawerSide } from "./drawer/DrawerSide";
 export { default as DrawerProceed } from "./drawer/DraweProceed";
 export { default as SideCardDrawer } from "./productCards/SideCardDrawer/SideCardDrawer";
+export { default as CategoriesCard } from "./productCards/categories/CategoriesCard";

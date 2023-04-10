@@ -14,10 +14,10 @@ const DrawerSide = (props) => {
   return (
     <motion.div
       initial={{
-        y: 100,
+        y: 200,
       }}
       animate={{
-        y: props.isDrawerOpened && props.sides ? 0 : 100,
+        y: props.isDrawerOpened && props.sides ? 0 : 200,
         height: props.isDrawerOpened && props.sides ? "80%" : "0%",
         transition: {
           duration: 1,

@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 //icons
 import { AiFillCaretLeft } from "react-icons/ai";
 //importing the components
-import { CheckOutCard } from "../../components";
+import { CheckOutCard, SideCardDrawer } from "../../components";
 
-const CheckOut = () => {
+const CheckOut = (props) => {
   const navigate = useNavigate();
   return (
     <motion.div
@@ -116,6 +116,58 @@ const CheckOut = () => {
         <CheckOutCard />
         <CheckOutCard />
       </motion.div>
+
+      {/* Containor for recommendations */}
+      <div className="recommendations">
+        <div className="wrapperRecommendations">
+          <h1>Others Also Tried This</h1>
+          <div className="recommendations_Scrollable">
+            <SideCardDrawer
+              nameSide="Small"
+              priceSide="1.12"
+              backgroundColor="#fbfbf9"
+              imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/SFRIES-61-1-61.png"
+            />
+            <SideCardDrawer
+              nameSide="Burger"
+              priceSide="1.12"
+              backgroundColor="#fbfbf9"
+              imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/MDMVAV-5151-1-5151.png"
+            />
+            <SideCardDrawer
+              nameSide="Large"
+              priceSide="1.12"
+              backgroundColor="#fbfbf9"
+              imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/SFRIES-61-1-61.png"
+            />
+            <SideCardDrawer
+              nameSide="Small"
+              priceSide="1.12"
+              backgroundColor="#fbfbf9"
+              imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/SFRIES-61-1-61.png"
+            />
+            <SideCardDrawer
+              nameSide="Small"
+              priceSide="1.12"
+              backgroundColor="#fbfbf9"
+              imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/SFRIES-61-1-61.png"
+            />
+          </div>
+        </div>
+      </div>
+      {/* Playwrite Testting tool */}
+
+      {/* Promo Code  */}
+      <div className="promoCode">
+        <div className="wrapperPromoCode">
+          <div className="promoCodeInput">
+            <input type="text" placeholder="Promo Code" />
+          </div>
+          <div className="promoCodeButton">
+            <button>Apply</button>
+          </div>
+        </div>
+      </div>
 
       <div className="priceCheckOut">
         <div className="wrapperPriceCheckOut">
