@@ -40,6 +40,9 @@ const MainFrame = () => {
         exit={{
           opacity: 0,
           x: -10,
+          transition: {
+            duration: 0.4,
+          },
         }}
         className="backgroundSheet"
       ></motion.div>

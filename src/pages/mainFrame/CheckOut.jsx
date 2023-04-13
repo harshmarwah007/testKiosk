@@ -14,21 +14,23 @@ const CheckOut = (props) => {
   return (
     <motion.div
       initial={{
-        x: "50%",
-        y: "50%",
+        x: "90%",
+        y: "90%",
         width: "20%",
         maxHeight: "300px",
+        opacity: 0,
       }}
       animate={{
         x: "0",
         y: "0",
         width: "100%",
         minHeight: "100vh",
+        opacity: 1,
 
         transition: {
-          duration: 1,
+          duration: 0.4,
           type: "spring",
-          stiffness: 80,
+          stiffness: 90,
         },
       }}
       className="checkOut"

@@ -1,7 +1,12 @@
 import React from "react";
 
 //routing
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 
 //destructure this
 import { LoginPage, MainFrame, ChooseOrder, CheckOut } from "./pages/index";
@@ -10,18 +15,17 @@ import { LoginPage, MainFrame, ChooseOrder, CheckOut } from "./pages/index";
 import { AnimatePresence } from "framer-motion";
 
 const App = () => {
+  const location = useLocation();
   return (
-    <Router>
-      <AnimatePresence mode="wait">
-        <Routes>
-          <Route path="/" element={<LoginPage />} />
-          <Route path="/mainFrame" element={<MainFrame />} />
-          <Route path="/chooseOrder" element={<ChooseOrder />} />
-          <Route path="/checkout" element={<CheckOut />} />
-          <Route path="*" element={<h1>404</h1>} />
-        </Routes>
-      </AnimatePresence>
-    </Router>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/mainFrame" element={<MainFrame />} />
+        <Route path="/chooseOrder" element={<ChooseOrder />} />
+        <Route path="/checkout" element={<CheckOut />} />
+        <Route path="*" element={<h1>404</h1>} />
+      </Routes>
+    </AnimatePresence>
   );
 };
 

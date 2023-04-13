@@ -1,0 +1,8 @@
+.PaymentMethod {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--main-Color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
