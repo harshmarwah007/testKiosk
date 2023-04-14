@@ -26,13 +26,15 @@ const CheckOut = (props) => {
         width: "100%",
         minHeight: "100vh",
         opacity: 1,
-
         transition: {
-          duration: 0.4,
-          type: "spring",
-          stiffness: 90,
-        },
+          duration: 0.2
+        }
       }}
+      transition={
+        {
+          duration: 0.1,
+        }
+      }
       className="checkOut"
     >
       <div className="backAndLanguage">
@@ -178,7 +180,14 @@ const CheckOut = (props) => {
             <h3>$1.23</h3>
           </div>
           <div className="containorButton">
-            <button className="checkOut1">Checkout</button>
+            <button
+              className="checkOut1"
+              onClick={() => {
+                navigate("/paymentMethod");
+              }}
+            >
+              Checkout
+            </button>
           </div>
         </div>
       </div>

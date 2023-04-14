@@ -32,6 +32,7 @@ button {
   --gray: #fbfbf9;
   --yellow: #ffca40;
   --redBackgroundDiscount: #d34549;
+  --green: ""
 }
 
 .flex-col {

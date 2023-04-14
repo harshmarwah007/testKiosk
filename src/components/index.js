@@ -25,3 +25,4 @@ export { default as DrawerSide } from "./drawer/DrawerSide";
 export { default as DrawerProceed } from "./drawer/DraweProceed";
 export { default as SideCardDrawer } from "./productCards/SideCardDrawer/SideCardDrawer";
 export { default as CategoriesCard } from "./productCards/categories/CategoriesCard";
+export { default as CartCard } from "./productCards/cartCards/CartCards";

@@ -18,7 +18,7 @@
   top: 0;
   width: 150rem;
   /* Make it translucent */
-  
+
   opacity: 1;
 }
 
@@ -41,15 +41,15 @@
   align-items: center;
 }
 .logoChooseImage {
-  width: 125px;
-  height: 125px;
+  width: 200px;
+  height: 200px;
 
   object-fit: contain;
   animation: header 800ms backwards;
 }
 .logoChooseImage img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   object-fit: contain;
 }
 

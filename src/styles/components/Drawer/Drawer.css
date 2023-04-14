@@ -201,7 +201,7 @@
   align-items: center;
 }
 
-.containorCustomize button {
+.DoneButton {
   margin: 15px;
   padding: 50px 40px 50px 40px;
   color: var(--red);
@@ -209,6 +209,15 @@
   border: none;
   font-weight: 600;
   border-radius: 30px;
+}
+.customProductQuantity button {
+  margin: 15px;
+  padding: 10px 20px 10px 20px;
+  color: var(--red);
+  background-color: var(--yellow);
+  border: none;
+  font-weight: 600;
+  border-radius: 10px;
 }
 
 /* Combo meals Css Styling  */

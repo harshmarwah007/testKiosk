@@ -27,6 +27,7 @@ const Drawer = (props) => {
     <motion.div
       initial={{
         y: -100,
+        height: "0",
       }}
       animate={{
         y: 0,
@@ -39,6 +40,9 @@ const Drawer = (props) => {
           stiffness: 90,
           damping: 10,
         },
+      }}
+      exit={{
+        opacity: 0,
       }}
       className="containorDrawer"
     >
@@ -142,7 +146,12 @@ const Drawer = (props) => {
             className="button2"
             onClick={() => {
               props.setDrawer(false);
-              navigate("/checkOut");
+              props.addItem({
+                title: "Maharaja Mac",
+                imageURL:
+                  "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/CKMHMC-2754-1-2754.png",
+                price: 3.78,
+              });
             }}
           >
             Add to Cart
@@ -308,6 +317,7 @@ const Drawer = (props) => {
 
           <div className="buttonMoreData">
             <button
+              className="DoneButton"
               onClick={() => {
                 //close the customize modal
                 closeCustomizeTab();

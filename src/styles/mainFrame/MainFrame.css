@@ -177,6 +177,122 @@
 .containorCategories::-webkit-scrollbar {
   display: none;
 }
+.cartInformation_MainFrame {
+  height: 40px;
+  width: 100%;
+  background-color: var(--red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartItems_MainFrame {
+  position: fixed;
+  bottom: 0;
+  min-height: 100px;
+  background-color: #efefef;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.items_MainFrame {
+  width: 70%;
+  min-height: 100px;
+  /* background-color: var(--red); */
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+.price_MainFrame {
+  min-height: 130px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.price_MainFrame button {
+  min-height: 100%;
+  width: 60%;
+  padding: 50px 50px 50px 50px;
+  border-radius: 30px;
+  background-color: var(--yellow);
+  color: var(--red);
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-weight: 700;
+}
+.infoCart_MainFrame {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  color: var(--main-Color);
+  flex-direction: column;
+}
+.infoCart_MainFrame .itemNumber_MainFrame {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0px 2px 0px 2px;
+}
+.infoCart_MainFrame h5 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0px 2px 0px 2px;
+}
+.header_MainFrame {
+  width: 100%;
+  display: flex;
+  /* background-color: var(--yellow); */
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: red; */
+  padding: 20px 40px 10px 40px;
+}
+.header_MainFrame h5 {
+  font-size: 20px;
+  color: black;
+  font-weight: 700;
+}
+.infoCart_MainFrame .tax_MainFrame {
+  font-size: 10px;
+  font-weight: 500;
+  margin: 3px 10px 3px 10px;
+}
+.productCart_MainFrame {
+  width: 100%;
+  height: 100%;
+  /* background-color: green; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: scroll;
+  padding: 20px 30px 20px 30px;
+}
+
+.nextButton_MainFrame {
+  width: 60%;
+  height: 65px;
+  /* background-color: white; */
+}
+.nextButton_MainFrame button {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  color: var(--red);
+  font-weight: 700;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+/* Hide the scrollbar */
+.productCart_MainFrame::-webkit-scrollbar {
+  display: none;
+}
 
 /* css tricks for grid  */
 
@@ -203,11 +319,11 @@
   .banners {
     width: 100%;
     height: 300px; */
-    /* background: url(https://mcdonaldsblog.in/wp-content/uploads/2023/02/conversation-starters-at-McDonald-1024x552.png);
+/* background: url(https://mcdonaldsblog.in/wp-content/uploads/2023/02/conversation-starters-at-McDonald-1024x552.png);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat; */
-    /* display: flex;
+/* display: flex;
     justify-content: center;
     align-items: center;
     background-color: "#efefef";
@@ -242,8 +358,8 @@
     overflow-y: scroll;
     position: relative;
   } */
-  /* Hide the scrollbar */
-  /* .category::-webkit-scrollbar {
+/* Hide the scrollbar */
+/* .category::-webkit-scrollbar {
     display: none;
   }
   .headingCategory {
@@ -261,8 +377,8 @@
     margin-bottom: 5px;
   }
   .headingCategory h3 { */
-    /* padding: 0px 10px 0px 10px; */
-    /* font-weight: 400;
+/* padding: 0px 10px 0px 10px; */
+/* font-weight: 400;
     color: black;
     font-size: 25px;
   }
