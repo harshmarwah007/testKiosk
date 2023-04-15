@@ -22,6 +22,7 @@ import {
 import { AnimatePresence } from "framer-motion";
 
 const App = () => {
+  //location for creating the unique ids for the routes
   const location = useLocation();
   return (
     <AnimatePresence mode="wait">

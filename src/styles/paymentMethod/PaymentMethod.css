@@ -1,12 +1,12 @@
 .PaymentMethod {
   width: 100%;
   min-height: 100vh;
-  background-color: var(--red);
+  background-color: var(--main-Color);
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  color: white;
+  color: black;
   padding: 100px 0px 100px 0px;
 }
 .wrapperMiddle_PaymentOptions {
@@ -38,7 +38,7 @@
   padding: 20px;
   height: 490px;
   margin: 20px;
-  background-color: white;
+  background-color: #efefef;
   border-radius: 10px;
   display: flex;
   justify-content: flex-start;
