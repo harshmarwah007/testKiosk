@@ -8,9 +8,23 @@ import { useNavigate } from "react-router-dom";
 
 const PaymentMethod = () => {
   const navigate = useNavigate();
+  const [payhere, setPayHere] = React.useState(false);
+  const [payAtCounter, setPayAtCounter] = React.useState(false);
+  //function to set pay here
+  const clickPayHere = () => {
+    setPayHere(true);
+  };
+  const clickPayAtCounter = () => {
+    setPayAtCounter(true);
+  };
   return (
     <motion.div
-      initial={{ opacity: 0 }}
+      initial={{
+        opacity: 0,
+        transition: {
+          duration: 2,
+        },
+      }}
       animate={{ opacity: 1, transition: { duration: 0.8 } }}
       exit={{ opacity: 0, transition: { duration: 0.8 } }}
       className="PaymentMethod"
@@ -44,11 +58,14 @@ const PaymentMethod = () => {
               },
             }}
             exit={{
-              y: "-100%",
+              y: payhere ? "-100%" : "0%",
+              x: payAtCounter ? "-100%" : "0%",
               opacity: 0,
               transition: { duration: 0.5 },
             }}
             onClick={() => {
+              clickPayHere();
+              //navigate to the next page
               navigate("/mainFrame");
             }}
             className="firstCard_PaymentMethod"
@@ -79,9 +96,14 @@ const PaymentMethod = () => {
               scale: 0.9,
             }}
             exit={{
-              x: "100%",
+              y: payAtCounter ? "-100%" : "0%",
+              x: payhere ? "100%" : "0%",
               opacity: 0,
               transition: { duration: 0.5 },
+            }}
+            onClick={() => {
+              clickPayAtCounter();
+              navigate("/mainFrame");
             }}
             className="firstCard_PaymentMethod"
           >
