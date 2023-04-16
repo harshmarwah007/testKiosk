@@ -16,6 +16,7 @@ import {
   CheckOut,
   PaymentMethod,
   OnlinePayment,
+  PaymentSuccess,
 } from "./pages/index";
 
 //motion Animate Presence
@@ -32,6 +33,7 @@ const App = () => {
         <Route path="/checkout" element={<CheckOut />} />
         <Route path="/paymentMethod" element={<PaymentMethod />} />
         <Route path="/onlinePayment" element={<OnlinePayment />} />
+        <Route path="/paymentSuccess" element={<PaymentSuccess />} />
         <Route path="*" element={<h1>404</h1>} />
       </Routes>
     </AnimatePresence>

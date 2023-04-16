@@ -26,7 +26,7 @@ const PaymentMethod = () => {
         },
       }}
       animate={{ opacity: 1, transition: { duration: 0.8 } }}
-      exit={{ opacity: 0, transition: { duration: 0.8 } }}
+      exit={{transition: { duration: 0.8 } }}
       className="PaymentMethod"
     >
       <div className="logoChoose">
@@ -38,7 +38,14 @@ const PaymentMethod = () => {
         </div>
       </div>
       <div className="wrapperMiddle_PaymentOptions">
-        <h1>Ready to checkout?</h1>
+        <motion.h1
+          exit={{
+            y: "-100%",
+            opacity: 0,
+          }}
+        >
+          Ready to checkout?
+        </motion.h1>
         <div className="cards_PaymentMethod">
           <motion.div
             whileTap={{
@@ -66,7 +73,7 @@ const PaymentMethod = () => {
             onClick={() => {
               clickPayHere();
               //navigate to the next page
-              navigate("/mainFrame");
+              navigate("/onlinePayment");
             }}
             className="firstCard_PaymentMethod"
           >
