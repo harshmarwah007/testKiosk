@@ -1,9 +1,10 @@
 .chooseOption {
   height: 100vh;
   /* background-color: #efefef; */
-  background-image: url(https://i.pinimg.com/564x/73/72/61/737261b0143d766d6d65e49f5727ac6e.jpg);
+  /* background-image: url(https://i.pinimg.com/564x/73/72/61/737261b0143d766d6d65e49f5727ac6e.jpg);
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
+  background-color: var(--red);
   background-repeat: none;
   width: 100%;
   display: flex;
@@ -87,7 +88,7 @@
   justify-content: center;
   /* ///Border  */
   /* border: 1px solid #e5bd92; */
-  background-color: var(--main-Color);
+  background-color: #d34549;
   align-items: center;
   flex-direction: column;
   transition: cubic-bezier(0.86, 0.41, 0.45, 1.51);
@@ -101,7 +102,7 @@
   display: flex;
   justify-content: center;
   /* ///Border  */
-  background-color: var(--main-Color);
+  background-color: #d34549;
   align-items: center;
   flex-direction: column;
   transition: cubic-bezier(0.86, 0.41, 0.45, 1.51);
@@ -137,7 +138,7 @@
 .secondChoose h2,
 .firstChoose h2 {
   /* color: #ac8358; */
-  color: var(--red);
+  color: var(--main-Color);
 }
 
 @keyframes bodyAnimate {
