@@ -15,7 +15,13 @@ const SideCardDrawer = (props) => {
       className="SideCardDrawer"
       onClick={() => {
         console.log("Hello wordl");
+
         setIsClicked(!clicked);
+        props.addItem({
+          title: props.nameSide,
+          price: props.priceSide,
+          image: props.imageSide,
+        });
       }}
     >
       <div className="image_SideCardDrawer">
@@ -40,6 +46,7 @@ const SideCardDrawer = (props) => {
           />
         </motion.div>
       </div>
+
       <div className="info_SideCardDrawer">
         <h3>{props.nameSide}</h3>
         <p>${props.priceSide}</p>

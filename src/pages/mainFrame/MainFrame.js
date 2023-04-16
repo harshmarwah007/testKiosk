@@ -22,6 +22,7 @@ const MainFrame = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [sideDrawer, setIsSideDrawer] = useState(false);
   const [items, setItems] = useState([]);
+  const [itemsSides, setItemsSide] = useState([]);
   //add items
   const addItem = (item) => {
     console.log(item);
@@ -29,16 +30,16 @@ const MainFrame = () => {
     console.log(items);
   };
   //remove items
-  const removeItem = (item) => {
-    console.log(item);
-    setItems(items.filter((i) => i !== item));
+  const removeItem = (nameItem) => {
+    console.log(nameItem);
+    setItems(items.filter((i) => i.title !== nameItem));
     console.log(items);
   };
 
-  //use Effect to see the values changing in teh sideDrawer
+  //automatically add the itemsside to items
   useEffect(() => {
-    console.log("sideDrawer", sideDrawer);
-  }, [sideDrawer]);
+    setItems([...items, ...itemsSides]);
+  }, [itemsSides]);
 
   return (
     <motion.div className="containorMain">
@@ -80,6 +81,8 @@ const MainFrame = () => {
 
       <DrawerProceed drawer={setIsDrawerOpen} isDrawerOpened={isDrawerOpen} />
       <DrawerSide
+        itemsSide={itemsSides}
+        setItemSides={setItemsSide}
         drawer={setIsDrawerOpen}
         isDrawerOpened={isDrawerOpen}
         sides={sideDrawer ? true : false}
@@ -162,10 +165,12 @@ const MainFrame = () => {
                 }}
               >
                 <CartCard
+                  key={index}
                   title={item.title}
                   priceSide={item.price}
                   backgroundColor="#fbfbf9"
-                  imageSide="https://d2mn2a9fb37v58.cloudfront.net/90_MENU-4611-1-Sides-and-Dips.png"
+                  imageSide={item.image}
+                  removeItem={removeItem}
                 />
               </motion.div>
             ))}

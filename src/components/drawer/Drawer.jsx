@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 //import router
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 //import css
@@ -10,8 +10,19 @@ import { HiChevronLeft } from "react-icons/hi";
 import CustomizeCard from "../productCards/customizeCards/CustomizeCard";
 
 const Drawer = (props) => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
+  //increment function
+
   const [openCustomize, setOpenCustomize] = useState(false);
+  var [quantity, setQuantity] = useState(0);
+  //increment
+  const incrementQuantity = () => {
+    setQuantity(++quantity);
+  };
+  //decrement
+  const decrementQuantity = () => {
+    quantity === 0 ? (quantity = 0) : setQuantity(--quantity);
+  };
   //open the customize tab
   const openCustomizeTab = () => {
     setOpenCustomize(!openCustomize);
@@ -122,9 +133,28 @@ const Drawer = (props) => {
           className="containorInfoProduct"
         >
           <div className="containorQuantity">
-            <div className="buttonIncrement">+</div>
-            <div className="quantity">1</div>
-            <div className="buttonDecrement">-</div>
+            <div className="buttonDecrement" onClick={decrementQuantity}>
+              -
+            </div>
+
+            <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              exit={{
+                opacity: 0,
+              }}
+              className="quantity"
+            >
+              {quantity}
+            </motion.div>
+
+            <div className="buttonIncrement" onClick={incrementQuantity}>
+              +
+            </div>
           </div>
         </motion.div>
 
@@ -148,7 +178,7 @@ const Drawer = (props) => {
               props.setDrawer(false);
               props.addItem({
                 title: "Maharaja Mac",
-                imageURL:
+                image:
                   "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/CKMHMC-2754-1-2754.png",
                 price: 3.78,
               });

@@ -11,14 +11,31 @@ import { SideCardDrawer } from "../../components";
 import "../../styles/drawer/DrawerSide.css";
 
 const DrawerSide = (props) => {
+  //items selected
+
+  //add items
+  const addItem = (item) => {
+    console.log("This is the add item BUtton");
+    props.setItemSides([...props.itemsSide, item]);
+    console.log(props.itemsSide);
+  };
+  //remove items
+  // const removeItem = (item) => {
+  //   console.log(item);
+  //   setItems(items.filter((i) => i !== item));
+  //   console.log(items);
+  // };
+
   return (
     <motion.div
       initial={{
+        opacity: 0,
         y: 200,
       }}
       animate={{
         y: props.isDrawerOpened && props.sides ? 0 : 200,
-        height: props.isDrawerOpened && props.sides ? "80%" : "0%",
+        height: props.isDrawerOpened && props.sides ? "70%" : "0%",
+        opacity: props.isDrawerOpened && props.sides ? 1 : 0,
         transition: {
           duration: 1,
           type: "spring",
@@ -45,18 +62,21 @@ const DrawerSide = (props) => {
             priceSide="1.12"
             backgroundColor="#fbfbf9"
             imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/SFRIES-61-1-61.png"
+            addItem={addItem}
           />
           <SideCardDrawer
             nameSide="Medium"
             priceSide="1.40"
             backgroundColor="#fbfbf9"
             imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/MFRIES-60-1-60.png"
+            addItem={addItem}
           />
           <SideCardDrawer
             nameSide="Large"
             priceSide="1.93"
             imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/LFRIES-59-1-59.png"
             backgroundColor="#fbfbf9"
+            addItem={addItem}
           />
         </div>
       </div>
@@ -95,6 +115,20 @@ const DrawerSide = (props) => {
             widthSide="60px"
           />
         </div>
+      </div>
+      <div className="containorDoneDOne_SideCardDrawer">
+        <button
+          className="DoneButton"
+          onClick={() => {
+            props.drawer(false);
+            //closing the drawer globally
+            props.setSide(false);
+
+            // props.setSide(false);
+          }}
+        >
+          Done
+        </button>
       </div>
     </motion.div>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 //importing the css
 import "../../styles/pages/CheckOut.css";
@@ -11,6 +11,13 @@ import { CheckOutCard, SideCardDrawer } from "../../components";
 
 const CheckOut = (props) => {
   const navigate = useNavigate();
+  const [itemsSides, setItemsSide] = useState([]);
+  //add items
+  const addItem = (item) => {
+    console.log(item);
+    setItemsSide([...itemsSides, item]);
+  };
+
   return (
     <motion.div
       initial={{
@@ -27,14 +34,12 @@ const CheckOut = (props) => {
         minHeight: "100vh",
         opacity: 1,
         transition: {
-          duration: 0.2
-        }
+          duration: 0.2,
+        },
       }}
-      transition={
-        {
-          duration: 0.1,
-        }
-      }
+      transition={{
+        duration: 0.1,
+      }}
       className="checkOut"
     >
       <div className="backAndLanguage">
@@ -131,30 +136,35 @@ const CheckOut = (props) => {
               priceSide="1.12"
               backgroundColor="#fbfbf9"
               imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/SFRIES-61-1-61.png"
+              addItem={addItem}
             />
             <SideCardDrawer
               nameSide="Burger"
               priceSide="1.12"
               backgroundColor="#fbfbf9"
               imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/MDMVAV-5151-1-5151.png"
+              addItem={addItem}
             />
             <SideCardDrawer
               nameSide="Large"
               priceSide="1.12"
               backgroundColor="#fbfbf9"
               imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/SFRIES-61-1-61.png"
+              addItem={addItem}
             />
             <SideCardDrawer
               nameSide="Small"
               priceSide="1.12"
               backgroundColor="#fbfbf9"
               imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/SFRIES-61-1-61.png"
+              addItem={addItem}
             />
             <SideCardDrawer
               nameSide="Small"
               priceSide="1.12"
               backgroundColor="#fbfbf9"
               imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/SFRIES-61-1-61.png"
+              addItem={addItem}
             />
           </div>
         </div>

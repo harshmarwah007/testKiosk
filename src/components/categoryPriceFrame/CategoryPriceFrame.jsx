@@ -29,7 +29,7 @@ const CategoryPriceFrame = (props) => {
 
         className="headingCategory"
       >
-        <h3>{props.headingFirst}</h3>
+        <h1>{props.headingFirst}</h1>
         <h4>{props.headingSecond}</h4>
       </motion.div>
       <motion.div

@@ -193,7 +193,7 @@ const MainContent = (props) => {
               discount="80% off"
             />
           </motion.div>
-          <motion.div variants={childVariants} className="card">
+          {/* <motion.div variants={childVariants} className="card">
             <CategoriesCard
               drawer={props.drawer}
               productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
@@ -201,13 +201,13 @@ const MainContent = (props) => {
               sides={true}
               discount="80% off"
             />
-          </motion.div>
+          </motion.div> */}
         </motion.div>
 
         {/* //PriceCard */}
         <PriceFrame
-          headingFirst="Popular Items"
-          // headingSecond="what's up"
+          headingFirst="Popular"
+          headingSecond="McDonald's Classics Only"
           drawer={props.drawer}
         />
 
