@@ -43,7 +43,7 @@
   border-radius: 10px;
   display: flex;
   justify-content: flex-start;
-  align-items: start;
+  align-items: flex-start;
   flex-direction: column;
 }
 .wrapperFirst_PaymentMethod,

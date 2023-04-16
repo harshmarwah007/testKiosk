@@ -203,7 +203,7 @@
   /* background-color: var(--red); */
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start ;
   flex-direction: column;
 }
 .price_MainFrame {
@@ -230,7 +230,7 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   color: var(--main-Color);
   flex-direction: column;
 }

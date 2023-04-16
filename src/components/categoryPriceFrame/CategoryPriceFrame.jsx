@@ -29,8 +29,8 @@ const CategoryPriceFrame = (props) => {
 
         className="headingCategory"
       >
-        <h2>{props.headingFirst}</h2>
-        <h3>{props.headingSecond}</h3>
+        <h3>{props.headingFirst}</h3>
+        <h4>{props.headingSecond}</h4>
       </motion.div>
       <motion.div
         className="categoryCards"

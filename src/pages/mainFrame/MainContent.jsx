@@ -96,7 +96,7 @@ const MainContent = (props) => {
           <motion.div variants={childVariants} className="card">
             <CategoriesCard
               drawer={props.drawer}
-              productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
+              productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/ZMMCSC-5016-1-5016.png"
               title="Burger"
               discount="80% off"
             />
@@ -112,7 +112,7 @@ const MainContent = (props) => {
           <motion.div variants={childVariants} className="card">
             <CategoriesCard
               drawer={props.drawer}
-              productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/CLABCK-6013-1-6013.png"
+              productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/MAPPFR-6448-1-6448.png"
               title="Burger"
               discount="80% off"
             />
@@ -125,14 +125,14 @@ const MainContent = (props) => {
             <CategoriesCard
               drawer={props.drawer}
               productImage="https://d2mn2a9fb37v58.cloudfront.net/90_MENU-4611-1-Sides-and-Dips.png"
-              title="Cheese Burger"
+              title="Sides"
               discount="80% off"
             />
           </motion.div>
           <motion.div variants={childVariants} className="card">
             <CategoriesCard
               drawer={props.drawer}
-              productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/VGMHMC-2763-1-2763.png"
+              productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/MDMVAV-5151-1-5151.png"
               title="Burger"
               discount="80% off"
             />
@@ -206,8 +206,8 @@ const MainContent = (props) => {
 
         {/* //PriceCard */}
         <PriceFrame
-          headingFirst="Hey,"
-          headingSecond="what's up"
+          headingFirst="Popular Items"
+          // headingSecond="what's up"
           drawer={props.drawer}
         />
 
