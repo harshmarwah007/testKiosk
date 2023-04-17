@@ -6,3 +6,4 @@ export { default as PaymentMethod } from "./paymentMethod/PaymentMethod";
 export { default as SelectOnlinePaymentMethod } from "./SelectOnlinePaymentMethod/SelectOnlinePaymentMethod";
 export { default as OnlinePayment } from "./onlinePayment/OnlinePayment";
 export { default as PaymentSuccess } from "./finalSuccessPage/FinalPage";
+export { default as StartNow } from "./StartNow/StartNow";

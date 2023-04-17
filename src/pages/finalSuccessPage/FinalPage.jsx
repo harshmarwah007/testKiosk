@@ -81,7 +81,7 @@ const FinalPage = () => {
         <div className="buttonSuccess_OnlinePayment">
           <button
             onClick={() => {
-              navigate("/chooseOrder");
+              navigate("/StartNow");
             }}
           >
             Order Again

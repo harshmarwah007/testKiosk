@@ -17,6 +17,7 @@ import {
   PaymentMethod,
   OnlinePayment,
   PaymentSuccess,
+  StartNow,
 } from "./pages/index";
 
 //motion Animate Presence
@@ -29,6 +30,7 @@ const App = () => {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<LoginPage />} />
+        <Route path="/startNow" element={<StartNow />} />
         <Route path="/mainFrame" element={<MainFrame />} />
         <Route path="/chooseOrder" element={<ChooseOrder />} />
         <Route path="/checkout" element={<CheckOut />} />
