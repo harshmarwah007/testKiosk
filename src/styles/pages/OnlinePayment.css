@@ -38,9 +38,10 @@
   width: 80%;
   height: 100px;
   background-color: var(--main-Color);
+  color: var(--red);
   border: none;
   border-radius: 10px;
-  color: var(--red);
+  /* color: var(--red); */
   font-size: 20px;
   font-weight: 600;
   cursor: pointer;

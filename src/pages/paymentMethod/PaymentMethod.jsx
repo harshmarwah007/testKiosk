@@ -26,7 +26,7 @@ const PaymentMethod = () => {
         },
       }}
       animate={{ opacity: 1, transition: { duration: 0.8 } }}
-      exit={{transition: { duration: 0.8 } }}
+      exit={{ transition: { duration: 0.8 } }}
       className="PaymentMethod"
     >
       <div className="logoChoose">
@@ -110,7 +110,7 @@ const PaymentMethod = () => {
             }}
             onClick={() => {
               clickPayAtCounter();
-              navigate("/mainFrame");
+              navigate("/paymentSuccess");
             }}
             className="firstCard_PaymentMethod"
           >
@@ -123,7 +123,7 @@ const PaymentMethod = () => {
                 src="https://cdnl.iconscout.com/lottie/premium/thumb/female-cashier-5482755-4603857.mp4"
               ></video> */}
             </div>
-            <div className="wrapperFirstHeader_PaymentMethod">
+            <div className="wrapperFirstHeader_PaymentMethod ">
               <h1>Pay at counter</h1>
             </div>
           </motion.div>
