@@ -15,7 +15,8 @@
   justify-content: center;
   align-items: center;
 }
-.banner_StartNow img {
+.banner_StartNow img,
+.banner_StartNow video {
   /* Fit the image without breaking pixels to the whole screen  */
   width: 100%;
   height: 100%;
@@ -25,7 +26,8 @@
   width: 100%;
   height: 15%;
   /* background-color: #124c40; */
-  background-color: #b3372d ;
+  /* background-color: #b3372d ; */
+  background-color: #b90e17;
   display: flex;
   justify-content: flex-start;
   align-items: center;

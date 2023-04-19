@@ -8,7 +8,33 @@ import "../../styles/mainFrame/MainFrame.css";
 // import SidebarCardfrom "../../components/productCards/categories/SidebarCard";
 import SidebarCard from "../../components/productCards/sidebarCategoryCard/SidebarCard";
 
-const Sidebar = () => {
+const Sidebar = (props) => {
+  //function to set item  to drink
+  const setDrinks = () => {
+    props.drinksCategory === "Drinks"
+      ? props.setDrinksCategory("")
+      : props.setDrinksCategory("Drinks");
+  };
+  //set burgers and wraps
+  const setBurgersAndWraps = () => {
+    props.drinksCategory === "Burgers and Wraps"
+      ? props.setDrinksCategory("")
+      : props.setDrinksCategory("Burgers and Wraps");
+  };
+
+  //set burgers
+  const setBurgers = () => {
+    props.drinksCategory === "Burgers"
+      ? props.setDrinksCategory("")
+      : props.setDrinksCategory("Burgers");
+  };
+  //set meals
+  const setMeals = () => {
+    props.drinksCategory === "Meals"
+      ? props.setDrinksCategory("")
+      : props.setDrinksCategory("Meals");
+  };
+
   const parentVariants = {
     animate: {
       transition: {
@@ -66,134 +92,89 @@ const Sidebar = () => {
       >
         <motion.div variants={childVariants} className="card">
           <SidebarCard
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
-            title="Burger"
+            setDrinks={setDrinks}
+            productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/90/MENU-702-1-Beverages"
+            title="Drinks"
             discount="80% off"
           />
         </motion.div>
         <motion.div variants={childVariants} className="card">
           <SidebarCard
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
-            title="Burger"
+            setDrinks={setBurgersAndWraps}
+            productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/90/MENU-690-1-Desserts"
+            title="Desserts"
             discount="80% off"
           />
         </motion.div>
         <motion.div variants={childVariants} className="card">
           <SidebarCard
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
-            title="Burger"
+            setDrinks={setBurgers}
+            productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/140/MENU-659-1-Burger-and-wraps"
+            title="Gourmet Burgers"
             discount="80% off"
           />
         </motion.div>
         <motion.div variants={childVariants} className="card">
           <SidebarCard
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
-            title="Burger"
+            setDrinks={setMeals}
+            productImage="https://s7d1.scene7.com/is/image/mcdonalds/nav_happy_meal_160x160:category-panel-left-desktop"
+            title="EZ Meals"
             discount="80% off"
           />
         </motion.div>
         <motion.div variants={childVariants} className="card">
           <SidebarCard
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
-            title="Burger"
+            setDrinks={setBurgersAndWraps}
+            productImage="https://s7d1.scene7.com/is/image/mcdonalds/Menu_LeftRail_mcd-160x160:category-panel-left-desktop"
+            title="Mc Backery"
             discount="80% off"
           />
         </motion.div>
         <motion.div variants={childVariants} className="card">
           <SidebarCard
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
-            title="Burger"
+            setDrinks={setBurgersAndWraps}
+            productImage="https://s7d1.scene7.com/is/image/mcdonalds/snacks_sides_300x300:category-panel-left-desktop"
+            title="Fries and Sides"
             discount="80% off"
           />
         </motion.div>
         <motion.div variants={childVariants} className="card">
           <SidebarCard
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
-            title="Burger"
+            setDrinks={setBurgersAndWraps}
+            productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/90/MENU-4611-1-Sides-and-Dips"
+            title="Sides and Dips"
             discount="80% off"
           />
         </motion.div>
         <motion.div variants={childVariants} className="card">
           <SidebarCard
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
-            title="Burger"
+            setDrinks={setBurgersAndWraps}
+            productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/90/MENU-702-1-Beverages"
+            title="Beverages"
             discount="80% off"
           />
         </motion.div>
         <motion.div variants={childVariants} className="card">
           <SidebarCard
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
-            title="Burger"
+            setDrinks={setBurgersAndWraps}
+            productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/90/Cheese_Burgers_and_Meals-4874-1-4874.png"
+            title="Cheese Meals"
             discount="80% off"
           />
         </motion.div>
         <motion.div variants={childVariants} className="card">
           <SidebarCard
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
-            title="Burger"
+            setDrinks={setBurgersAndWraps}
+            productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/90/MENU-690-1-Desserts"
+            title="Desserts"
             discount="80% off"
           />
         </motion.div>
         <motion.div variants={childVariants} className="card">
           <SidebarCard
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
-            title="Burger"
-            discount="80% off"
-          />
-        </motion.div>
-        <motion.div variants={childVariants} className="card">
-          <SidebarCard
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
-            title="Burger"
-            discount="80% off"
-          />
-        </motion.div>
-        <motion.div variants={childVariants} className="card">
-          <SidebarCard
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
-            title="Burger"
-            discount="80% off"
-          />
-        </motion.div>
-        <motion.div variants={childVariants} className="card">
-          <SidebarCard
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
-            title="Burger"
-            discount="80% off"
-          />
-        </motion.div>
-        <motion.div variants={childVariants} className="card">
-          <SidebarCard
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
-            title="Burger"
-            discount="80% off"
-          />
-        </motion.div>
-        <motion.div variants={childVariants} className="card">
-          <SidebarCard
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
-            title="Burger"
-            discount="80% off"
-          />
-        </motion.div>
-        <motion.div variants={childVariants} className="card">
-          <SidebarCard
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
-            title="Burger"
-            discount="80% off"
-          />
-        </motion.div>
-        <motion.div variants={childVariants} className="card">
-          <SidebarCard
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
-            title="Burger"
-            discount="80% off"
-          />
-        </motion.div>
-        <motion.div variants={childVariants} className="card">
-          <SidebarCard
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
-            title="Burger"
+            setDrinks={setBurgersAndWraps}
+            productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/90/Shakes_and_Coolers-4613-1-4613.png"
+            title="Shakes and Coolers"
             discount="80% off"
           />
         </motion.div>

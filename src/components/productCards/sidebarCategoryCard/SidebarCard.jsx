@@ -9,12 +9,15 @@ import { motion } from "framer-motion";
 const SidebarCard = (props) => {
   const [isSelectedItem, setIsSelectedItem] = useState(false);
   const selectItem = () => {
+    props.setDrinks();
     setIsSelectedItem(!isSelectedItem);
   };
 
   return (
     <motion.div
-      onClick={selectItem}
+      onClick={() => {
+        selectItem();
+      }}
       whileTap={{
         scale: 0.5,
         opacity: 0.5,

@@ -27,3 +27,4 @@ export { default as SideCardDrawer } from "./productCards/SideCardDrawer/SideCar
 export { default as CategoriesCard } from "./productCards/categories/CategoriesCard";
 export { default as CartCard } from "./productCards/cartCards/CartCards";
 export { default as KeyPad } from "./keyPad/KeyPad";
+export { default as CategoryContent } from "./categoryContent/categoryContent";

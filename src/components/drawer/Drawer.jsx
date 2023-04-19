@@ -14,7 +14,7 @@ const Drawer = (props) => {
   //increment function
 
   const [openCustomize, setOpenCustomize] = useState(false);
-  var [quantity, setQuantity] = useState(0);
+  var [quantity, setQuantity] = useState(1);
   //increment
   const incrementQuantity = () => {
     setQuantity(++quantity);

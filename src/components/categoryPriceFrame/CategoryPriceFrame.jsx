@@ -44,7 +44,16 @@ const CategoryPriceFrame = (props) => {
           <PriceCards
             price="2.42"
             drawer={props.drawer}
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
+            productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/AMTRCV-5276-1-5276.png"
+            title="Cheese Burger"
+            discount="80% off"
+          />
+        </motion.div>
+        <motion.div className="card">
+          <PriceCards
+            price="2.42"
+            drawer={props.drawer}
+            productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/CLABCK-6013-1-6013.png"
             title="Burger"
             discount="80% off"
           />
@@ -53,7 +62,7 @@ const CategoryPriceFrame = (props) => {
           <PriceCards
             price="2.42"
             drawer={props.drawer}
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
+            productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/AMTRCV-5276-1-5276.png"
             title="Burger"
             discount="80% off"
           />
@@ -62,16 +71,7 @@ const CategoryPriceFrame = (props) => {
           <PriceCards
             price="2.42"
             drawer={props.drawer}
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
-            title="Burger"
-            discount="80% off"
-          />
-        </motion.div>
-        <motion.div className="card">
-          <PriceCards
-            price="2.42"
-            drawer={props.drawer}
-            productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
+            productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/CLABCK-6013-1-6013.png"
             title="Burger"
             discount="80% off"
           />

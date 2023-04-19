@@ -93,6 +93,7 @@ const DrawerSide = (props) => {
 
         <div className="wrapper_DrawerSide23">
           <SideCardDrawer
+            addItem={addItem}
             nameSide="Mustard Sauce"
             priceSide="1.12"
             imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/MUSSCE-290-1-290.png"
@@ -101,6 +102,7 @@ const DrawerSide = (props) => {
           />
 
           <SideCardDrawer
+            addItem={addItem}
             nameSide="Barbeque Sauce"
             priceSide="1.40"
             imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/BARSCE-289-1-289.png"
@@ -108,6 +110,7 @@ const DrawerSide = (props) => {
             widthSide="60px"
           />
           <SideCardDrawer
+            addItem={addItem}
             nameSide="Chilli Sauce Sachet"
             priceSide="1.93"
             imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/CHLSCE-5909-1-5909.png"
