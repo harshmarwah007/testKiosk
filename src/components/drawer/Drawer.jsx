@@ -21,7 +21,7 @@ const Drawer = (props) => {
   };
   //decrement
   const decrementQuantity = () => {
-    quantity === 0 ? (quantity = 0) : setQuantity(--quantity);
+    quantity === 1 ? (quantity = 1) : setQuantity(--quantity);
   };
   //open the customize tab
   const openCustomizeTab = () => {
@@ -230,7 +230,11 @@ const Drawer = (props) => {
         >
           <CustomizeCard
             customProductName="Wheat Bun"
-            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+            imageCustomProduct="https://s7d1.scene7.com/is/image/mcdonalds/big_mac_bun"
+          />
+          {/* <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://s7d1.scene7.com/is/image/mcdonalds/big_mac_bun"
           />
           <CustomizeCard
             customProductName="Wheat Bun"
@@ -275,8 +279,40 @@ const Drawer = (props) => {
           <CustomizeCard
             customProductName="Wheat Bun"
             imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
+          /> */}
+          <CustomizeCard
+            customProductName="Extra Onions"
+            imageCustomProduct="https://s7d1.scene7.com/is/image/mcdonalds/reconstituted_onions"
           />
           <CustomizeCard
+            customProductName="Wheat Bun"
+            imageCustomProduct="https://s7d1.scene7.com/is/image/mcdonalds/big_mac_bun"
+          />
+          <CustomizeCard
+            customProductName="Extra Patty"
+            imageCustomProduct="https://s7d1.scene7.com/is/image/mcdonalds/10_1_patty"
+          />
+          <CustomizeCard
+            customProductName="Big Mac Sauce"
+            imageCustomProduct="https://s7d1.scene7.com/is/image/mcdonalds/shredded_lettuce"
+          />
+          <CustomizeCard
+            customProductName="Extra Cheese"
+            imageCustomProduct="https://s7d1.scene7.com/is/image/mcdonalds/ingredient_american_cheese_180x180"
+          />
+          <CustomizeCard
+            customProductName="Buffalo Cheese"
+            imageCustomProduct="https://s7d1.scene7.com/is/image/mcdonalds/ingredient_american_cheese_180x180"
+          />
+          <CustomizeCard
+            customProductName="Goat Cheese"
+            imageCustomProduct="https://s7d1.scene7.com/is/image/mcdonalds/ingredient_american_cheese_180x180"
+          />
+          <CustomizeCard
+            customProductName="Pickles"
+            imageCustomProduct="https://s7d1.scene7.com/is/image/mcdonalds/pickles"
+          />
+          {/* <CustomizeCard
             customProductName="Wheat Bun"
             imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
           />
@@ -315,35 +351,7 @@ const Drawer = (props) => {
           <CustomizeCard
             customProductName="Wheat Bun"
             imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
-          />
-          <CustomizeCard
-            customProductName="Wheat Bun"
-            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
-          />
-          <CustomizeCard
-            customProductName="Wheat Bun"
-            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
-          />
-          <CustomizeCard
-            customProductName="Wheat Bun"
-            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
-          />
-          <CustomizeCard
-            customProductName="Wheat Bun"
-            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
-          />
-          <CustomizeCard
-            customProductName="Wheat Bun"
-            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
-          />
-          <CustomizeCard
-            customProductName="Wheat Bun"
-            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
-          />
-          <CustomizeCard
-            customProductName="Wheat Bun"
-            imageCustomProduct="https://c1.wallpaperflare.com/preview/992/138/492/lettuce-fresh-hydroponic-green.jpg"
-          />
+          /> */}
 
           <div className="buttonMoreData">
             <button

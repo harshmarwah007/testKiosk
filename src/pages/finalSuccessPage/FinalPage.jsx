@@ -4,6 +4,7 @@ import "../../styles/pages/PaymentSuccess.css";
 //importing the navigate
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { KeyPad } from "../../components";
 
 const FinalPage = () => {
   const navigate = useNavigate();
@@ -87,6 +88,7 @@ const FinalPage = () => {
             Order Again
           </button>
         </div>
+        {/* <KeyPad /> */}
       </div>
     </motion.div>
   );

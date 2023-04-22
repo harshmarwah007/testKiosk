@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 //importing the css files
 import "../../../styles/components/categoriesCard/CustomizeCard.css";
 
 const CustomizeCard = (props) => {
+  const [quantity, setQuantity] = useState(0);
+  //increment
+  const increment = () => {
+    setQuantity(quantity + 1);
+  };
+  //decrement
+  const decrement = () => {
+    if (quantity > 0) {
+      setQuantity(quantity - 1);
+    }
+  };
   return (
     <div className="customizeCard">
       <div className="customProductInfo">
@@ -15,11 +26,13 @@ const CustomizeCard = (props) => {
         </div>
       </div>
       <div className="customProductQuantity">
-        <button>+</button>
+        <button onClick={decrement}>-</button>
+        <div className="customQuantity">
+          {quantity}
+          {quantity === 0 ? "" : "x"}
+        </div>
 
-        <div className="customQuantity">1</div>
-
-        <button>-</button>
+        <button onClick={increment}>+</button>
       </div>
     </div>
   );
