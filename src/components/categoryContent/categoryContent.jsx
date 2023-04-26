@@ -101,6 +101,8 @@ const CategoryContent = (props) => {
                   title={element.title}
                   discount="80% off"
                   setSide={setSideDrawer}
+                  addSelectedItem={props.addSelectedItem}
+                  cartItems={props.cartItems}
                 />
               </motion.div>
             );

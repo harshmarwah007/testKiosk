@@ -14,7 +14,7 @@ const SideCardDrawer = (props) => {
       }}
       className="SideCardDrawer"
       onClick={() => {
-        console.log("Hello wordl");
+        
 
         setIsClicked(!clicked);
         props.addSide({

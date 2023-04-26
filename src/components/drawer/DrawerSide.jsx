@@ -18,11 +18,15 @@ const DrawerSide = (props) => {
   const addSide = (item) => {
     console.log(item);
     setSide([...sides, item]);
+    console.log("This is the sides after addition : ",sides); 
   };
   const doneClick = () =>
   {
     //adding the items one by one into the mainCart
-    sides.forEach((item) => {
+
+    console.log("items will be shown here")
+    sides.map((item) => {
+      console.log(item);
       props.addCartItem(item);
     });
   }

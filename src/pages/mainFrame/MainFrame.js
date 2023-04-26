@@ -186,10 +186,20 @@ const MainFrame = () => {
   const [cartItems, setCartItems] = useState([]);
 
 
+
+  useEffect(() => {
+    console.log(cartItems);
+  }, [cartItems]);
+
+
+
   //function to add item in the cart
   const addCartItem = (item) => {
     console.log(item);
-    setCartItems([...cartItems, item]);
+    const items = cartItems;
+    items.push(item);
+    setCartItems([...items]);
+
     console.log(cartItems);
   };
   const removeCartItem = (nameItem) => {
@@ -330,6 +340,8 @@ const MainFrame = () => {
           drawerValue={isDrawerOpen}
           setSide={setIsSideDrawer}
           side={sideDrawer}
+          addSelectedItem={addSelectedItem}
+          cartItems={cartItems}
          
         />
       </motion.div>
