@@ -22,7 +22,7 @@ import {
   CategoryContent,
 } from "../../components";
 
-const MainFrame = () => {
+const MainFrame = (props) => {
   const navigate = useNavigate();
 
   const [categoryItems] = useState({
@@ -30,27 +30,27 @@ const MainFrame = () => {
       {
         title: "Coke",
         productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/DC_202112_0521_MediumCoke_Glass_832x472:1-4-product-tile-desktop",
-      },
-      {
-        title: "Fanta",
-        productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/Header_MediumFantaOrange_Glass_832x472:1-4-product-tile-desktop",
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MCOKE-16-1-16.png",
       },
       {
         title: "Sprite",
         productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/Header_MediumSprite_Glass_832x472:1-4-product-tile-desktop",
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MSPRT-30-1-30.png",
       },
       {
-        title: "Diet Coke",
+        title: "Water",
         productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/DC_202112_0652_MediumDietCoke_Glass_2_832x472:1-4-product-tile-desktop",
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/VEDWAT-5506-1-5506.png",
       },
       {
-        title: "Frozen Coke",
+        title: "Juice",
         productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/Header_MediumFrozenCocaColaClassic_Glass_832x472-1:1-4-product-tile-desktop",
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MIXFBV-6112-1-6112.png",
+      },
+      {
+        title: "Coke Zero",
+        productImage:
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/DIETCC-19-1-19.png",
       },
     ],
 
@@ -58,22 +58,22 @@ const MainFrame = () => {
       {
         title: "Short Cake McFlurry",
         productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/StrawberryShortcakeMcFlurry_832x472v3:1-4-product-tile-desktop",
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/SMFLOR-4-1-4.png",
       },
       {
         title: "Oreo McFlurry",
         productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/DC_202002_3832_OREOMcFlurry_832x472:1-4-product-tile-desktop",
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/RBLKFR-2803-1-2803.png",
       },
       {
         title: "M&M McFlurry",
         productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/DC_202002_3830_MandMMcFlurry_832x472:1-4-product-tile-desktop",
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/BRWMSS-9-1-9.png",
       },
       {
         title: "Vanilla Cone",
         productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/DC_202106_0336_LargeVanillaCone_832x472:1-4-product-tile-desktop",
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/NMFGS-5-1-5.png",
       },
       {
         title: "Chocolate Shake",
@@ -83,7 +83,7 @@ const MainFrame = () => {
       {
         title: "Vanilla Shake",
         productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/DC_201907_1598_MediumVanillaShake_Glass_A1_832x472:1-4-product-tile-desktop",
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/NMSTR-421-1-421.png",
       },
       {
         title: "Starwberry Shake",
@@ -152,17 +152,17 @@ const MainFrame = () => {
       {
         title: "Hamburger Meal",
         productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/DC_202103_6975_HamburgerHappyMeal_AppleSlices_WhiteMilkJug_Left_832x472:1-4-product-tile-desktop",
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/BPMDMC-6111-1-6111.png",
       },
       {
         title: "Mc Nuggets Meal",
         productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/DC_202103_7002_4McNuggetsHappyMeal_AppleSlices_WhiteMilkJug_Left_832x472:1-4-product-tile-desktop",
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/HMVGNM-6104-1-6104.png",
       },
       {
         title: "Mc Nuggets Meal 6",
         productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/DC_202103_7780_6McNuggetsHappyMeal_AppleSlices_WhiteMilkJug_Left_832x472:1-4-product-tile-desktop",
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/HMEBN2-6177-1-6177.png",
       },
     ],
   });
@@ -187,8 +187,9 @@ const MainFrame = () => {
 
 
 
+  //use effect to copy all the items to props.setCart
   useEffect(() => {
-    console.log(cartItems);
+    props.setCart(cartItems);
   }, [cartItems]);
 
 

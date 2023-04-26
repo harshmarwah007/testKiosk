@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 //routing
 import {
@@ -25,6 +25,7 @@ import {
 import { AnimatePresence } from "framer-motion";
 
 const App = () => {
+  const [cart, setCart] = useState([]);
   //location for creating the unique ids for the routes
   const location = useLocation();
   return (
@@ -32,9 +33,9 @@ const App = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<LoginPage />} />
         <Route path="/startNow" element={<StartNow />} />
-        <Route path="/mainFrame" element={<MainFrame />} />
+        <Route path="/mainFrame" element={<MainFrame cart={cart} setCart={setCart} />} />
         <Route path="/chooseOrder" element={<ChooseOrder />} />
-        <Route path="/checkout" element={<CheckOut />} />
+        <Route path="/checkout" element={<CheckOut cart={cart} />} />
         <Route path="/paymentMethod" element={<PaymentMethod />} />
         <Route path="/onlinePayment" element={<OnlinePayment />} />
         <Route path="/paymentSuccess" element={<PaymentSuccess />} />

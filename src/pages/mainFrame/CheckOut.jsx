@@ -10,6 +10,7 @@ import { AiFillCaretLeft } from "react-icons/ai";
 import { CheckOutCard, SideCardDrawer } from "../../components";
 
 const CheckOut = (props) => {
+  console.log(props.cart);
   const navigate = useNavigate();
   const [itemsSides, setItemsSide] = useState([]);
   //add items
@@ -121,9 +122,19 @@ const CheckOut = (props) => {
         }}
         className="checkOutOrders"
       >
+        {/* <CheckOutCard />
         <CheckOutCard />
-        <CheckOutCard />
-        <CheckOutCard />
+        <CheckOutCard /> */}
+
+        {props.cart.map((item) => (
+          <CheckOutCard
+            name={item.title}
+            price={item.productPrice ? item.productPrice : item.price}
+            image={item.image}
+            quantity={item.quantity}
+            addItem={addItem}
+          />
+        ))}
       </motion.div>
 
       {/* Containor for recommendations */}
@@ -132,38 +143,38 @@ const CheckOut = (props) => {
           <h1>Others Also Tried This</h1>
           <div className="recommendations_Scrollable">
             <SideCardDrawer
-              nameSide="Small"
+              nameSide="Big Spicy Wrap"
               priceSide="1.12"
               backgroundColor="#fbfbf9"
-              imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/SFRIES-61-1-61.png"
+              imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MENU-7254-1-piripiri-mcspicy-paneer-wrap"
               addItem={addItem}
             />
             <SideCardDrawer
-              nameSide="Burger"
+              nameSide="Coke Meal"
               priceSide="1.12"
               backgroundColor="#fbfbf9"
-              imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/MDMVAV-5151-1-5151.png"
+              imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/170123053511-6492"
               addItem={addItem}
             />
             <SideCardDrawer
-              nameSide="Large"
+              nameSide="Paneer Burger"
               priceSide="1.12"
               backgroundColor="#fbfbf9"
-              imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/SFRIES-61-1-61.png"
+              imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MENU-7252-1-piripiri-spicy-paneer-burger"
               addItem={addItem}
             />
             <SideCardDrawer
-              nameSide="Small"
+              nameSide="Coke Zero Can"
               priceSide="1.12"
               backgroundColor="#fbfbf9"
-              imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/SFRIES-61-1-61.png"
+              imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/DIETCC-19-1-19.png"
               addItem={addItem}
             />
             <SideCardDrawer
-              nameSide="Small"
+              nameSide="Mc Cafe"
               priceSide="1.12"
               backgroundColor="#fbfbf9"
-              imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/SFRIES-61-1-61.png"
+              imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/CFRMMT-1820-1-1820.png"
               addItem={addItem}
             />
           </div>

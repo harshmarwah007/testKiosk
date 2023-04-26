@@ -22,6 +22,7 @@ const SideCardDrawer = (props) => {
           productPrice: props.priceSide,
           image: props.imageSide,
           quantity: 2,
+          
         });
       }}
     >

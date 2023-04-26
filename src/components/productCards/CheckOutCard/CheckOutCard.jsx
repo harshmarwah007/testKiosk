@@ -2,31 +2,31 @@ import React from "react";
 //importing the css file
 import "../../../styles/components/categoriesCard/CheckOutCard.css";
 
-const CheckOutCard = () => {
+const CheckOutCard = (props) => {
   return (
     <div className="cardCheckout">
       <div className="productCheckout">
         <div className="imageProductCheckout">
           <img
-            src="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/MDMVAV-5151-1-5151.png"
+            src={props.image}
             alt=""
           />
         </div>
         <div className="infoCheckout">
-          <h3>McVeggie</h3>
+          <h3>{props.name}</h3>
           <p
             style={{
               fontSize: "12px",
             }}
           >
-            $3.79
+            ${props.price}
           </p>
         </div>
       </div>
       <div className="quantityCheckout">
         <button className="buttonIncrement1">+</button>
         <div className="quantity3">
-          <p>1</p>
+          <p>{props.quantity}</p>
         </div>
         <button className="buttonDecrement1">-</button>
       </div>
