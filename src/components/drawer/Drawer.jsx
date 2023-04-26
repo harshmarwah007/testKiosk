@@ -10,6 +10,7 @@ import { HiChevronLeft } from "react-icons/hi";
 import CustomizeCard from "../productCards/customizeCards/CustomizeCard";
 
 const Drawer = (props) => {
+
   // const navigate = useNavigate();
   //increment function
 
@@ -104,7 +105,7 @@ const Drawer = (props) => {
                   damping: 15,
                 },
               }}
-              src="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/CKMHMC-2754-1-2754.png"
+              src={props.selectedItem.productImage}
               alt=""
             />
           </div>
@@ -115,7 +116,7 @@ const Drawer = (props) => {
               }}
               className="headingProductDrawer"
             >
-              Big Mac
+              {props.selectedItem.title}
             </motion.h2>
             <motion.p
               animate={{
@@ -176,10 +177,11 @@ const Drawer = (props) => {
             className="button2"
             onClick={() => {
               props.setDrawer(false);
-              props.addItem({
-                title: "Maharaja Mac",
-                image:
-                  "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/CKMHMC-2754-1-2754.png",
+              props.addCartItem({
+                title: props.selectedItem.title,
+                image: props.selectedItem.productImage,
+                quantity: quantity,
+
                 price: 3.78,
               });
             }}

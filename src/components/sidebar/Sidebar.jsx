@@ -117,7 +117,7 @@ const Sidebar = (props) => {
         <motion.div variants={childVariants} className="card">
           <SidebarCard
             setDrinks={setMeals}
-            productImage="https://s7d1.scene7.com/is/image/mcdonalds/nav_happy_meal_160x160:category-panel-left-desktop"
+            productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/HMCKNM-6105-1-6105.png"
             title="EZ Meals"
             discount="80% off"
           />

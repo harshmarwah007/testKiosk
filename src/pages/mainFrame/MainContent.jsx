@@ -13,7 +13,7 @@ const MainContent = (props) => {
   //function to set the side drawer open for the category Card
   const setSideDrawer = () => {
     console.log("Hello world");
-    props.setSide(!props.side);
+    props.setSide(true);
     console.log(props.side);
   };
 
@@ -95,26 +95,32 @@ const MainContent = (props) => {
           {/* Category cards should be added here */}
           <motion.div variants={childVariants} className="card">
             <CategoriesCard
+              addSelectedItem={props.addSelectedItem}
               drawer={props.drawer}
-              productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/ZMMCSC-5016-1-5016.png"
-              title="Burger"
+              productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/CKMHMC-2754-1-2754.png"
+              title="Big Mac"
+              cartItems={props.cartItems}
               discount="80% off"
             />
           </motion.div>
           <motion.div variants={childVariants} className="card">
             <CategoriesCard
+              addSelectedItem={props.addSelectedItem}
               drawer={props.drawer}
               productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/MDMVAV-5151-1-5151.png"
               title="Meals"
+              cartItems={props.cartItems}
               discount="80% off"
             />
           </motion.div>
           <motion.div variants={childVariants} className="card">
             <CategoriesCard
+              addSelectedItem={props.addSelectedItem}
               drawer={props.drawer}
               productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/MAPPFR-6448-1-6448.png"
               title="Burger"
               discount="80% off"
+              cartItems={props.cartItems}
             />
           </motion.div>
           <motion.div
@@ -124,73 +130,92 @@ const MainContent = (props) => {
           >
             <CategoriesCard
               drawer={props.drawer}
-              productImage="https://d2mn2a9fb37v58.cloudfront.net/90_MENU-4611-1-Sides-and-Dips.png"
-              title="Sides"
+              addSelectedItem={props.addSelectedItem}
+              productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/FMPPMX-6457-1-6457.png"
+              title="Fries"
+              cartItems={props.cartItems}
               discount="80% off"
+              setSideDrawer={setSideDrawer}
             />
           </motion.div>
           <motion.div variants={childVariants} className="card">
             <CategoriesCard
               drawer={props.drawer}
+              addSelectedItem={props.addSelectedItem}
               productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/MDMVAV-5151-1-5151.png"
               title="Burger"
               discount="80% off"
+              cartItems={props.cartItems}
             />
           </motion.div>
           <motion.div variants={childVariants} className="card">
             <CategoriesCard
               drawer={props.drawer}
+              addSelectedItem={props.addSelectedItem}
               productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/ATCVGM-5280-1-5280.png"
               title="Burger"
               discount="80% off"
+              cartItems={props.cartItems}
             />
           </motion.div>
           <motion.div variants={childVariants} className="card">
             <CategoriesCard
               drawer={props.drawer}
+              addSelectedItem={props.addSelectedItem}
               productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/MVGMCM-2770-1-2770.png"
               title="Burger"
               discount="80% off"
+              cartItems={props.cartItems}
             />
           </motion.div>
           <motion.div variants={childVariants} className="card">
             <CategoriesCard
               drawer={props.drawer}
+              addSelectedItem={props.addSelectedItem}
               productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/MSPVMM-5295-1-5295.png"
               title="Burger"
               discount="80% off"
+              cartItems={props.cartItems}
             />
           </motion.div>
           <motion.div variants={childVariants} className="card">
             <CategoriesCard
               drawer={props.drawer}
+              addSelectedItem={props.addSelectedItem}
               productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/CLABCK-6013-1-6013.png"
               title="Burger"
               discount="80% off"
+              cartItems={props.cartItems}
             />
           </motion.div>
           <motion.div variants={childVariants} className="card">
             <CategoriesCard
               drawer={props.drawer}
+              addSelectedItem={props.addSelectedItem}
               productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
               title="Burger"
               discount="80% off"
+              cartItems={props.cartItems}
             />
           </motion.div>
           <motion.div variants={childVariants} className="card">
             <CategoriesCard
               drawer={props.drawer}
+              addSelectedItem={props.addSelectedItem}
               productImage="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/210/MDMVAV-5151-1-5151.png"
               title="Burger"
               discount="80% off"
+              cartItems={props.cartItems}
             />
           </motion.div>
           <motion.div variants={childVariants} className="card">
             <CategoriesCard
               drawer={props.drawer}
+              addSelectedItem={props.addSelectedItem}
               productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
               title="Burger"
               discount="80% off"
+              cartItems={props.cartItems}
             />
           </motion.div>
           {/* <motion.div variants={childVariants} className="card">
@@ -209,6 +234,7 @@ const MainContent = (props) => {
           headingFirst="Popular"
           headingSecond="McDonald's Classics Only"
           drawer={props.drawer}
+          cartItems={props.cartItems}
         />
 
         <motion.div
@@ -246,6 +272,7 @@ const MainContent = (props) => {
               productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
               title="Burger"
               discount="80% off"
+              cartItems={props.cartItems}
             />
           </motion.div>
           <motion.div variants={childVariants} className="card">
@@ -254,6 +281,7 @@ const MainContent = (props) => {
               productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
               title="Burger"
               discount="80% off"
+              cartItems={props.cartItems}
             />
           </motion.div>
           <motion.div variants={childVariants} className="card">
@@ -262,6 +290,7 @@ const MainContent = (props) => {
               productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
               title="Burger"
               discount="80% off"
+              cartItems={props.cartItems}
             />
           </motion.div>
           <motion.div variants={childVariants} className="card">
@@ -270,6 +299,7 @@ const MainContent = (props) => {
               productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
               title="Burger"
               discount="80% off"
+              cartItems={props.cartItems}
             />
           </motion.div>
           <motion.div variants={childVariants} className="card">
@@ -278,6 +308,7 @@ const MainContent = (props) => {
               productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
               title="Burger"
               discount="80% off"
+              cartItems={props.cartItems}
             />
           </motion.div>
           <motion.div variants={childVariants} className="card">
@@ -286,6 +317,7 @@ const MainContent = (props) => {
               productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
               title="Burger"
               discount="80% off"
+              cartItems={props.cartItems}
             />
           </motion.div>
           <motion.div variants={childVariants} className="card">
@@ -294,6 +326,7 @@ const MainContent = (props) => {
               productImage="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/i8cc2ekzmyo7hokzr7z3"
               title="Burger"
               discount="80% off"
+              cartItems={props.cartItems}
             />
           </motion.div>
         </motion.div>

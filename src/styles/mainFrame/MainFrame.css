@@ -217,6 +217,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .price_MainFrame button {
   min-height: 100%;

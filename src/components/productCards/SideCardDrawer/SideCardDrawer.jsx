@@ -17,10 +17,11 @@ const SideCardDrawer = (props) => {
         console.log("Hello wordl");
 
         setIsClicked(!clicked);
-        props.addItem({
+        props.addSide({
           title: props.nameSide,
-          price: props.priceSide,
+          productPrice: props.priceSide,
           image: props.imageSide,
+          quantity: 2,
         });
       }}
     >

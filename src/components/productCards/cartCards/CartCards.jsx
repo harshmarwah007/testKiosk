@@ -17,12 +17,19 @@ const CartCards = (props) => {
           }}
         />
       </div>
+
+
+      <div className="quantity_CartCard">
+        <h5>{props.quantity}</h5>
+
+      </div>
       <div className="containorCards">
         <div className="imageCart">
-          <img src={props.imageSide} alt="image" />
+          <img src={props.imageSide} alt="" />
         </div>
         <div className="productInformation">
           <h5>{props.title}</h5>
+          {/* <h5>{props.quantity}</h5> */}
         </div>
       </div>
     </div>

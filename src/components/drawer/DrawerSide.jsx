@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 //import back icon (left Arrow)
 import { HiChevronLeft } from "react-icons/hi";
@@ -13,12 +13,19 @@ import "../../styles/drawer/DrawerSide.css";
 const DrawerSide = (props) => {
   //items selected
 
-  //add items
-  const addItem = (item) => {
-    console.log("This is the add item BUtton");
-    props.setItemSides([...props.itemsSide, item]);
-    console.log(props.itemsSide);
+  const [sides, setSide] = useState([]);
+
+  const addSide = (item) => {
+    console.log(item);
+    setSide([...sides, item]);
   };
+  const doneClick = () =>
+  {
+    //adding the items one by one into the mainCart
+    sides.forEach((item) => {
+      props.addCartItem(item);
+    });
+  }
   //remove items
   // const removeItem = (item) => {
   //   console.log(item);
@@ -49,7 +56,9 @@ const DrawerSide = (props) => {
           className="arrow"
           onClick={() => {
             props.drawer(false);
-            // props.setSide(false);
+            if (props.sides) {
+              props.setSide(false);
+            }
           }}
         />
       </div>
@@ -62,21 +71,21 @@ const DrawerSide = (props) => {
             priceSide="1.12"
             backgroundColor="#fbfbf9"
             imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/SFRIES-61-1-61.png"
-            addItem={addItem}
+            addSide={addSide}
           />
           <SideCardDrawer
             nameSide="Medium"
             priceSide="1.40"
             backgroundColor="#fbfbf9"
             imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/MFRIES-60-1-60.png"
-            addItem={addItem}
+            addSide={addSide}
           />
           <SideCardDrawer
             nameSide="Large"
             priceSide="1.93"
             imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/LFRIES-59-1-59.png"
             backgroundColor="#fbfbf9"
-            addItem={addItem}
+            addSide={addSide}
           />
         </div>
       </div>
@@ -93,7 +102,7 @@ const DrawerSide = (props) => {
 
         <div className="wrapper_DrawerSide23">
           <SideCardDrawer
-            addItem={addItem}
+           
             nameSide="Mustard Sauce"
             priceSide="1.12"
             imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/MUSSCE-290-1-290.png"
@@ -102,7 +111,7 @@ const DrawerSide = (props) => {
           />
 
           <SideCardDrawer
-            addItem={addItem}
+           
             nameSide="Barbeque Sauce"
             priceSide="1.40"
             imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/BARSCE-289-1-289.png"
@@ -110,10 +119,18 @@ const DrawerSide = (props) => {
             widthSide="60px"
           />
           <SideCardDrawer
-            addItem={addItem}
+           
             nameSide="Chilli Sauce Sachet"
             priceSide="1.93"
             imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/110/CHLSCE-5909-1-5909.png"
+            backgroundColor="#f4f3f3"
+            widthSide="60px"
+          />
+          <SideCardDrawer
+           
+            nameSide="Peri Peri"
+            priceSide="1.93"
+            imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/LTOPPM-63-1-63.png"
             backgroundColor="#f4f3f3"
             widthSide="60px"
           />
@@ -126,6 +143,7 @@ const DrawerSide = (props) => {
             props.drawer(false);
             //closing the drawer globally
             props.setSide(false);
+            doneClick();
 
             // props.setSide(false);
           }}

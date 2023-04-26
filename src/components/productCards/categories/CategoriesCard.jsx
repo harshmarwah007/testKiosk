@@ -18,13 +18,35 @@ const CategoriesCard = (props) => {
     }
   }, [isSelectedItem]);
 
+  //useEffect to remove item if it is not in cart
+  useEffect(() => {
+    //finding the item in props.carPSidtItems array
+    const item = props?.cartItems?.find((item) => item.title === props.title);
+    //if the item is not in the cart
+    if (!item) {
+      setIsSelectedItem(false);
+    }
+  }, [props.cartItems]);
+
   const selectItem = () => {
     setIsSelectedItem(!isSelectedItem);
   };
 
+  //add the selected item
+  const addItem = () => {
+    props.addSelectedItem({
+      title: props.title,
+      productImage: props.productImage,
+      productName: props.title,
+    });
+  };
+
   return (
     <motion.div
-      onClick={selectItem}
+      onClick={() => {
+        selectItem();
+        addItem();
+      }}
       whileTap={{
         scale: 0.5,
         opacity: 0.5,

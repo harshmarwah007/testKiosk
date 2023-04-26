@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import Drawer from "../../components/drawer/Drawer";
@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 //components
 // import Sidebar from "../../components/sidebar/Sidebar";
 import MainContent from "./MainContent";
-// import DrawerProceed from "../../components/drawer/DraweProceed";
+// import DrawerProceed from "../../components/drawer/DrawerProceed";
 
 //importing the components
 import {
@@ -105,45 +105,45 @@ const MainFrame = () => {
       {
         title: "Big Mac",
         productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/DC_202201_0007-005_QuarterPounderwithCheese_832x472:1-4-product-tile-desktop",
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/VGMHMC-2763-1-2763.png",
       },
       {
-        title: "Double Patty",
+        title: "Mc Veggie",
         productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/202201_3426-005_DoubleQuarterPounderwithCheese_832x472:1-4-product-tile-desktop",
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MCVEGB-66-1-66.png",
       },
       {
-        title: "Double Cheese",
+        title: "Mc Chicken",
         productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/DC_202201_4282_QuarterPounderCheeseDeluxe_Shredded_832x472:1-4-product-tile-desktop",
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MCSCHK-47-1-47.png",
       },
       {
-        title: "Cheese Burger",
+        title: "Veg Maharaja Mac",
         productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/202002_0592_McDouble_Alt_832x472:1-4-product-tile-desktop",
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/VGMHMC-2763-1-2763.png",
       },
       {
-        title: "Big Mac",
+        title: "Aloo Tikki",
         productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/DC_201907_0005_BigMac_832x472:1-4-product-tile-desktop",
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MEXALO-3191-1-3191.png",
       },
       {
-        title: "Baconstation",
+        title: "Mc Egg",
         productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/DC_202201_4295-005_BaconQPC_832x472:1-4-product-tile-desktop",
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MSLEGG-5679-1-5679.png",
       },
       {
-        title: "Cheeseburger",
+        title: "Mc Premium",
         productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/DC_202006_0003_Cheeseburger_StraightBun_832x472:1-4-product-tile-desktop",
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MSPRCK-5293-1-5293.png",
       },
       {
-        title: "Double Cheese",
+        title: "Mc Cheese",
         productImage:
-          "https://s7d1.scene7.com/is/image/mcdonalds/DC_202002_0004_DoubleCheeseburger_Alt_832x472:product-header-desktop?wid=830&hei=458&dpr=off",
+          "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/CLABCK-6013-1-6013.png",
       },
       {
-        title: "Hamburger",
+        title: "Mc Cheese ",
         productImage:
           "https://s7d1.scene7.com/is/image/mcdonalds/DC_202006_0001_Hamburger_Alt_832x472:1-4-product-tile-desktop",
       },
@@ -171,6 +171,53 @@ const MainFrame = () => {
   const [items, setItems] = useState([]);
   const [itemsSides, setItemsSide] = useState([]);
   const [drinksCategory, setDrinksCategory] = useState("");
+  const [selectedItem, setSelectedItem] = useState(
+    {
+      title: "",
+      productImage: "",
+      productName: ""
+    }
+  )
+
+
+
+
+  //adding the items to cart
+  const [cartItems, setCartItems] = useState([]);
+
+
+  //function to add item in the cart
+  const addCartItem = (item) => {
+    console.log(item);
+    setCartItems([...cartItems, item]);
+    console.log(cartItems);
+  };
+  const removeCartItem = (nameItem) => {
+    console.log(nameItem);
+    setCartItems(cartItems.filter((i) => i.title !== nameItem));
+    console.log(cartItems);
+  };
+
+
+
+  //useeffect for the cart items
+  useEffect(() => {
+    console.log(cartItems);
+  }, [cartItems]);
+
+
+
+
+
+
+
+
+  //function for adding an item
+  const addSelectedItem = (item) => {
+    console.log(item);
+    setSelectedItem(item);
+    console.log(items);
+  };
   // const [clickedItem, setClickedItem] = useState({
   //   title: "",
   //   productImage: "",
@@ -182,12 +229,7 @@ const MainFrame = () => {
     setItems([...items, item]);
     console.log(items);
   };
-  //remove items
-  const removeItem = (nameItem) => {
-    console.log(nameItem);
-    setItems(items.filter((i) => i.title !== nameItem));
-    console.log(items);
-  };
+  
 
   // //automatically add the itemsside to items
   // useEffect(() => {
@@ -231,6 +273,7 @@ const MainFrame = () => {
       <Sidebar
         drinksCategory={drinksCategory}
         setDrinksCategory={setDrinksCategory}
+
         // setBurgersAndWrapsCategory={setDrinksCategory}
       />
       <motion.div
@@ -287,6 +330,7 @@ const MainFrame = () => {
           drawerValue={isDrawerOpen}
           setSide={setIsSideDrawer}
           side={sideDrawer}
+         
         />
       </motion.div>
       {/* Component MainContent */}
@@ -303,6 +347,8 @@ const MainFrame = () => {
           drawerValue={isDrawerOpen}
           setSide={setIsSideDrawer}
           side={sideDrawer}
+          addSelectedItem={addSelectedItem}
+          cartItems={cartItems}
           // clickedItem={clickedItem}
           // setClickedItem={setClickedItem}
         />
@@ -313,6 +359,9 @@ const MainFrame = () => {
         setDrawer={setIsDrawerOpen}
         sides={sideDrawer ? false : true}
         addItem={addItem}
+        selectedItem ={selectedItem}
+        addCartItem= {addCartItem}
+
         // clickedItem={clickedItem}
       />
 
@@ -325,13 +374,14 @@ const MainFrame = () => {
         sides={sideDrawer ? true : false}
         setSide={setIsSideDrawer}
         addItem={addItem}
+        addCartItem= {addCartItem}
       />
       {/* Cart Items */}
       <motion.div
         // Make it draggable
         //make this div full screen on drag
         drag="y"
-        //increse height of this div on drag
+        //increase height of this div on drag
         // dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
         //drag with momentum
 
@@ -343,14 +393,14 @@ const MainFrame = () => {
         dragElastic={0.1}
         dragMomentum={false}
         initial={{
-          y: items.length > 0 ? 0 : 300,
+          y: cartItems.length > 0 ? 0 : 300,
           //delay of 2 seconds
           transition: {
             duration: 0.7,
           },
         }}
         animate={{
-          y: items.length > 0 ? 0 : 300,
+          y: cartItems.length > 0 ? 0 : 300,
           //if dragging make increase height
           transition: {
             duration: 0.7,
@@ -392,7 +442,7 @@ const MainFrame = () => {
               imageSide="https://d2mn2a9fb37v58.cloudfront.net/90_MENU-4611-1-Sides-and-Dips.png"
             /> */}
 
-            {items.map((item, index) => (
+            {cartItems.map((item, index) => (
               //motion children staggering
               <motion.div
                 initial={{
@@ -420,9 +470,10 @@ const MainFrame = () => {
                   key={index}
                   title={item.title}
                   priceSide={item.price}
+                  quantity={item.quantity}
                   backgroundColor="#fbfbf9"
                   imageSide={item.image}
-                  removeItem={removeItem}
+                  removeItem={removeCartItem}
                 />
               </motion.div>
             ))}
@@ -434,6 +485,7 @@ const MainFrame = () => {
               navigate("/checkout");
             }}
           >
+
             Next
           </button>
         </div>
