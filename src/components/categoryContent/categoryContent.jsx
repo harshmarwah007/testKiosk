@@ -7,7 +7,7 @@ import "../../styles/mainFrame/MainFrame.css";
 
 //importing the components
 import CategoriesCard from "../../components/productCards/categories/CategoriesCard";
-import PriceFrame from "../../components/categoryPriceFrame/CategoryPriceFrame";
+// import PriceFrame from "../../components/categoryPriceFrame/CategoryPriceFrame";
 
 const CategoryContent = (props) => {
   //function to set the side drawer open for the category Card

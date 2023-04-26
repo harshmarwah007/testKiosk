@@ -4,7 +4,7 @@ import "../../styles/pages/PaymentSuccess.css";
 //importing the navigate
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { KeyPad } from "../../components";
+// import { KeyPad } from "../../components";
 
 const FinalPage = () => {
   const navigate = useNavigate();

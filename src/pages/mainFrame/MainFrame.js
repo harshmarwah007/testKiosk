@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import Drawer from "../../components/drawer/Drawer";
@@ -189,15 +189,15 @@ const MainFrame = () => {
     console.log(items);
   };
 
-  //automatically add the itemsside to items
-  useEffect(() => {
-    setItems([...items, ...itemsSides]);
-  }, [itemsSides]);
+  // //automatically add the itemsside to items
+  // useEffect(() => {
+  //   setItems([...items, ...itemsSides]);
+  // }, [itemsSides]);
 
-  //checking the values for drinks on every change
-  useEffect(() => {
-    console.log(drinksCategory);
-  }, [drinksCategory]);
+  // //checking the values for drinks on every change
+  // useEffect(() => {
+  //   console.log(drinksCategory);
+  // }, [drinksCategory]);
 
   //useEffect got checking the clicked item  has some value or not
   // useEffect(() => {

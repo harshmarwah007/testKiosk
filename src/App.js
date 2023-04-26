@@ -2,7 +2,7 @@ import React from "react";
 
 //routing
 import {
-  BrowserRouter as Router,
+
   Routes,
   Route,
   useLocation,

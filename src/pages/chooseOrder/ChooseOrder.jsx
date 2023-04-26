@@ -56,6 +56,9 @@ const ChooseOrder = () => {
               scale: 0.5,
               transition: { duration: 0.5 },
             }}
+            onClick={() => {
+              navigate("/mainFrame");
+            }}
             className="secondChoose"
           >
             <div className="imageFirstChoose">

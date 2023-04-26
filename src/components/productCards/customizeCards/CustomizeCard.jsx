@@ -18,7 +18,7 @@ const CustomizeCard = (props) => {
     <div className="customizeCard">
       <div className="customProductInfo">
         <div className="imageCustomProduct">
-          <img src={props.imageCustomProduct} alt="image" />
+          <img src={props.imageCustomProduct} alt="" />
         </div>
         <div className="nameCustomProduct">
           <p className="naemProduct">{props.customProductName}</p>
