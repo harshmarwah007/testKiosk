@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 //importing the css
 import "../../styles/pages/CheckOut.css";
@@ -11,6 +11,7 @@ import { CheckOutCard, SideCardDrawer } from "../../components";
 
 const CheckOut = (props) => {
   console.log(props.cart);
+  var [totalCart, setTotalCart] = useState(0)
   const navigate = useNavigate();
   const [itemsSides, setItemsSide] = useState([]);
   //add items
@@ -18,6 +19,31 @@ const CheckOut = (props) => {
     console.log(item);
     setItemsSide([...itemsSides, item]);
   };
+
+  ///function to calculate th total price from the cart
+  const totalPrice = () => {
+    //creating the total ticket
+    var total =0;
+    props.cart.map((item) => {
+      total = total + parseFloat(item.price);
+    }
+    );
+    //fixing upto 2 decimal places
+    total = total.toFixed(2);
+    setTotalCart(total);
+    
+   
+    
+  };
+
+
+  //use effect to calculate th total price
+  useEffect(()=>
+  {
+    totalPrice();
+    console.log(totalCart);
+
+  }, [props.cart])
 
 
   const addItemCart = (item) =>
@@ -245,7 +271,7 @@ const CheckOut = (props) => {
                   quantity: 1,
                 })
               }}
-              
+
             />
           </div>
         </div>
@@ -268,7 +294,7 @@ const CheckOut = (props) => {
         <div className="wrapperPriceCheckOut">
           <div className="totalCheckOut">
             <h4>Total</h4>
-            <h3>$1.23</h3>
+            <h3>${totalCart}</h3>
           </div>
           <div className="containorButton">
             <button
