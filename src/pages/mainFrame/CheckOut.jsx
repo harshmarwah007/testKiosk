@@ -19,6 +19,24 @@ const CheckOut = (props) => {
     setItemsSide([...itemsSides, item]);
   };
 
+
+  const parentVariants = {
+    animate: {
+      transition: {
+        type: "spring",
+        stiffness: 80,
+        damping: 15,
+
+        staggerChildren: 0.1, // Stagger time in seconds
+      },
+    },
+  };
+
+  const childVariants = {
+    initial: { opacity: 0, x: -50 },
+    animate: { opacity: 1, x: 0 },
+  };
+
   return (
     <motion.div
       initial={{
@@ -141,20 +159,50 @@ const CheckOut = (props) => {
       <div className="recommendations">
         <div className="wrapperRecommendations">
           <h1>Others Also Tried This</h1>
-          <div className="recommendations_Scrollable">
+          <motion.div
+           variants={parentVariants}
+           initial="initial"
+           animate="animate"
+           className="recommendations_Scrollable">
+            <motion.div variants={childVariants} className="recommendation_Containor">
             <SideCardDrawer
               nameSide="Big Spicy Wrap"
               priceSide="1.12"
               backgroundColor="#fbfbf9"
               imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MENU-7254-1-piripiri-mcspicy-paneer-wrap"
-              addItem={addItem}
+              addSide={() => {
+                props.setCart([
+                  ...props.cart,
+                  {
+                    title: "Big Spicy Wrap",
+                    price: "1.12",
+                    image:
+                      "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MENU-7254-1-piripiri-mcspicy-paneer-wrap",
+                    quantity: 1,
+                  },
+                ]);
+                return true;
+              }}
             />
+            </motion.div>
             <SideCardDrawer
               nameSide="Coke Meal"
               priceSide="1.12"
               backgroundColor="#fbfbf9"
               imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/170123053511-6492"
-              addItem={addItem}
+              addSide={() => {
+                props.setCart([
+                  ...props.cart,
+                  {
+                    title: "Coke Meal",
+                    price: "1.12",
+                    image:
+                      "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/170123053511-6492",
+                    quantity: 1,
+                  },
+                ]);
+                return true;
+              }}
             />
             <SideCardDrawer
               nameSide="Paneer Burger"
@@ -162,22 +210,58 @@ const CheckOut = (props) => {
               backgroundColor="#fbfbf9"
               imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MENU-7252-1-piripiri-spicy-paneer-burger"
               addItem={addItem}
+              addSide={() => {
+                props.setCart([
+                  ...props.cart,
+                  {
+                    title: "Paneer Burger",
+                    price: "1.12",
+                    image:"https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MENU-7252-1-piripiri-spicy-paneer-burger",
+                    quantity: 1,
+                  },
+                ]);
+                return true;
+              }}
             />
             <SideCardDrawer
               nameSide="Coke Zero Can"
               priceSide="1.12"
               backgroundColor="#fbfbf9"
               imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/DIETCC-19-1-19.png"
-              addItem={addItem}
+              addSide={() => {
+                props.setCart([
+                  ...props.cart,
+                  {
+                    title: "Coke Zero Can",
+                    price: "1.12",
+                    image:
+                      "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/DIETCC-19-1-19.png",
+                    quantity: 1,
+                  },
+                ]);
+              }}
             />
             <SideCardDrawer
               nameSide="Mc Cafe"
               priceSide="1.12"
               backgroundColor="#fbfbf9"
               imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/CFRMMT-1820-1-1820.png"
-              addItem={addItem}
+              addSide={() => {
+                //adding the item to the cart
+                props.setCart([
+                  ...props.cart,
+                  {
+                    title: "Mc Cafe",
+                    price: "1.12",
+                    image:
+                      "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/CFRMMT-1820-1-1820.png",
+                    quantity: 1,
+                  },
+                ]);
+                return true;
+              }}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
       {/* Playwrite Testting tool */}

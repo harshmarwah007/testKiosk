@@ -14,8 +14,9 @@
 }
 .productCheckout,
 .quantityCheckout {
-  min-width: 250px;
+  /* width: 250px; */
   height: 100%;
+  
 
   padding: 4px;
   display: flex;
@@ -29,6 +30,7 @@
   border-radius: 20px;
   background-color: white;
   object-fit: cover;
+  margin: 0px 10px 0px 10px;
 }
 .imageProductCheckout img {
   width: 100%;
