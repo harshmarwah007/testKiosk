@@ -1,28 +1,49 @@
-import logo from './logo.svg';
-import './App.scss';
+import React, {useState} from "react";
 
-function App() {
+//routing
+import {
+
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+
+//destructure this
+import {
+  LoginPage,
+  MainFrame,
+  ChooseOrder,
+  CheckOut,
+  PaymentMethod,
+  OnlinePayment,
+  PaymentSuccess,
+  StartNow,
+  SelectOrder,
+} from "./pages/index";
+
+//motion Animate Presence
+import { AnimatePresence } from "framer-motion";
+
+const App = () => {
+  const [cart, setCart] = useState([]);
+  //location for creating the unique ids for the routes
+  const location = useLocation();
   return (
-    <div className="App">
-      Hello world
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-
-          This is the test
-        </a>
-      </header>
-    </div>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/startNow" element={<StartNow />} />
+        <Route path="/mainFrame" element={<MainFrame cart={cart} setCart={setCart} />} />
+        <Route path="/chooseOrder" element={<ChooseOrder />} />
+        <Route path="/checkout" element={<CheckOut cart={cart} />} />
+        <Route path="/paymentMethod" element={<PaymentMethod />} />
+        <Route path="/onlinePayment" element={<OnlinePayment />} />
+        <Route path="/paymentSuccess" element={<PaymentSuccess />} />
+        <Route path="/selectOrder" element={<SelectOrder />} />
+        <Route path="*" element={<h1>404</h1>} />
+      </Routes>
+    </AnimatePresence>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,11 @@
+.categoriesCardSide {
+  width: 130px;
+  height: 130px;
+  margin: 10px 0px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.categoriesInfoSide {
+  font-size: 14px;
+}
