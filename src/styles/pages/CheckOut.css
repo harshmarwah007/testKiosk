@@ -23,7 +23,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
+
 }
 
 .goBack {
@@ -61,7 +61,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  min-height: 500px;
+  min-height: 700px;
   overflow-y: scroll;
 }
 

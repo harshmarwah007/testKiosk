@@ -10,7 +10,7 @@ import {
 
 //destructure this
 import {
-  LoginPage,
+  // LoginPage,
   MainFrame,
   ChooseOrder,
   CheckOut,
@@ -31,11 +31,11 @@ const App = () => {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<LoginPage />} />
+        <Route path="/" element={<StartNow />} />
         <Route path="/startNow" element={<StartNow />} />
         <Route path="/mainFrame" element={<MainFrame cart={cart} setCart={setCart} />} />
         <Route path="/chooseOrder" element={<ChooseOrder />} />
-        <Route path="/checkout" element={<CheckOut cart={cart} />} />
+        <Route path="/checkout" element={<CheckOut cart={cart} setCart={setCart} />} />
         <Route path="/paymentMethod" element={<PaymentMethod />} />
         <Route path="/onlinePayment" element={<OnlinePayment />} />
         <Route path="/paymentSuccess" element={<PaymentSuccess />} />

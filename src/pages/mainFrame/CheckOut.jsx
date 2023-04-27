@@ -19,6 +19,14 @@ const CheckOut = (props) => {
     setItemsSide([...itemsSides, item]);
   };
 
+
+  const addItemCart = (item) =>
+  {
+   //adding the item to the cart
+   props.setCart([...props.cart, item]);
+   console.log(props.cart)
+  }
+
   return (
     <motion.div
       initial={{
@@ -148,13 +156,42 @@ const CheckOut = (props) => {
               backgroundColor="#fbfbf9"
               imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MENU-7254-1-piripiri-mcspicy-paneer-wrap"
               addItem={addItem}
+              addSide=
+              {
+                ()=>
+                {
+                  //setting the item in the cart 
+                  addItemCart({
+                    title: "Big Spicy Wrap",
+                    price: "1.12",
+                    image: "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MENU-7254-1-piripiri-mcspicy-paneer-wrap",
+                    quantity: 1,
+                  })
+  
+  
+                  return true;
+                }
+              }
             />
             <SideCardDrawer
               nameSide="Coke Meal"
               priceSide="1.12"
               backgroundColor="#fbfbf9"
               imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/170123053511-6492"
-              addItem={addItem}
+              addItem={addItem} 
+              addSide={()=>
+              {
+                //setting the item in the cart 
+                addItemCart({
+                  title: "Coke Meal",
+                  price: "1.12",
+                  image: "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/170123053511-6492",
+                  quantity: 1,
+                })
+
+
+                return true;
+              }}
             />
             <SideCardDrawer
               nameSide="Paneer Burger"
@@ -162,6 +199,16 @@ const CheckOut = (props) => {
               backgroundColor="#fbfbf9"
               imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MENU-7252-1-piripiri-spicy-paneer-burger"
               addItem={addItem}
+              addSide={()=>
+              {
+                //setting the item in the cart
+                addItemCart({
+                  title: "Paneer Burger",
+                  price: "1.12",
+                  image: "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MENU-7252-1-piripiri-spicy-paneer-burger",
+                  quantity: 1,
+                })
+              }}
             />
             <SideCardDrawer
               nameSide="Coke Zero Can"
@@ -169,6 +216,18 @@ const CheckOut = (props) => {
               backgroundColor="#fbfbf9"
               imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/DIETCC-19-1-19.png"
               addItem={addItem}
+              addSide={()=>
+              {
+                //setting the item in the cart
+                addItemCart({
+                  title: "Coke Zero Can",
+                  price: "1.12",
+                  image: "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/DIETCC-19-1-19.png",
+                  quantity: 1,
+                })
+              }}
+
+              
             />
             <SideCardDrawer
               nameSide="Mc Cafe"
@@ -176,6 +235,17 @@ const CheckOut = (props) => {
               backgroundColor="#fbfbf9"
               imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/CFRMMT-1820-1-1820.png"
               addItem={addItem}
+              addSide={()=>
+              {
+                //setting the item in the cart
+                addItemCart({
+                  title: "Mc Cafe",
+                  price: "1.12",
+                  image: "https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/CFRMMT-1820-1-1820.png",
+                  quantity: 1,
+                })
+              }}
+              
             />
           </div>
         </div>
