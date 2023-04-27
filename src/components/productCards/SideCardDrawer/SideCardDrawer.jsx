@@ -19,7 +19,7 @@ const SideCardDrawer = (props) => {
         setIsClicked(!clicked);
         props.addSide({
           title: props.nameSide,
-          productPrice: props.priceSide,
+          price: props.priceSide,
           image: props.imageSide,
           quantity: 2,
           
