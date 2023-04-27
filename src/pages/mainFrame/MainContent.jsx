@@ -58,7 +58,8 @@ const MainContent = (props) => {
           autoPlay
           loop
           muted
-          src="bannerVideos/videoplayback.webm"
+          // src="bannerVideos/videoplayback.webm"
+          src="https://rr2---sn-npoeenez.googlevideo.com/videoplayback?expire=1682598569&ei=SRZKZOPxM-CJsfIPhbO36A8&ip=66.115.165.111&id=o-ANyuC08uEehXroKfz5mU_tK6GB-d9k6_1MsSy3MYwKMM&itag=248&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C278%2C394%2C395%2C396%2C397%2C398%2C399&source=youtube&requiressl=yes&spc=qEK7B3eOHWFek-CCKMGQNaVuuY_YwVbILjBO3LYt0A&vprv=1&mime=video%2Fwebm&ns=ZvfVoQtpi-kDDHmtWEY83d4N&gir=yes&clen=5209639&dur=20.120&lmt=1655937697900605&keepalive=yes&fexp=24007246&c=WEB&txp=5535434&n=VuCGVBu3GMwb3w&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cspc%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRQIgZZGA_E0xyoLjkSY7i6EIeLFwbGNsoGq5GApQoGHz_-0CIQDUiMIq32nqBSjlBp3xKcykzVvP6-Y61TpMQVAYXWBZpA%3D%3D&redirect_counter=1&cm2rm=sn-a5meel76&req_id=f3af44fff85ba3ee&cms_redirect=yes&cmsv=e&mh=Cd&mip=122.177.109.197&mm=34&mn=sn-npoeenez&ms=ltu&mt=1682576684&mv=m&mvi=2&pl=21&lsparams=mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRQIhAJA_8jgsApz5AXifu6FHx-FizRDQT2JB37oduEEr0NvwAiABr5G1C2ZNcnpiqGI2_ZOGPnOtFzuqt1SIuhCh6SuNgA%3D%3D"
         ></video>
 
         {/* Video */}
