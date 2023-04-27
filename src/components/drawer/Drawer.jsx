@@ -123,7 +123,7 @@ const Drawer = (props) => {
                 fontSize: openCustomize ? "1.3rem" : "2rem",
               }}
             >
-              $3.78
+              ${quantity * 3.78}
             </motion.p>
           </div>
         </motion.div>
@@ -203,7 +203,7 @@ const Drawer = (props) => {
                   alt=""
                 />
               </div>
-              <div className="price">$5.67</div>
+              <div className="price">${quantity * 1.23}</div>
               <div
                 className="discount"
                 style={{
