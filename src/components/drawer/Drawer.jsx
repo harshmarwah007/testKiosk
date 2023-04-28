@@ -8,8 +8,10 @@ import "../../styles/components/Drawer/Drawer.css";
 import { HiChevronLeft } from "react-icons/hi";
 // import {CustomizeCard} from "../../components";
 import CustomizeCard from "../productCards/customizeCards/CustomizeCard";
+import SideCardDrawer from "../productCards/SideCardDrawer/SideCardDrawer";
 
 const Drawer = (props) => {
+  const [selectedCombo, setSelectedCombo] = useState(false);
 
   // const navigate = useNavigate();
   //increment function
@@ -44,7 +46,7 @@ const Drawer = (props) => {
       animate={{
         y: 0,
         // opacity: isDrawerOpen ? 1 : 0.1,
-        height: props.drawer && props.sides ? "70%" : "0",
+        height: props.drawer && props.sides ? "68%" : "0",
 
         transition: {
           duration: 0,
@@ -191,31 +193,122 @@ const Drawer = (props) => {
         </motion.div>
 
         {/* Containor for making the meals combo meals */}
-        <div className="comboMeals">
-          <div className="mealContainor">
-            <div className="headerComboMeals">
-              <h2>Combo Meal</h2>
-            </div>
-            <div className="containorProductInfo">
-              <div className="imagePart">
-                <img
-                  src="https://d2mn2a9fb37v58.cloudfront.net/210_MAPPFR-6448-1-6448.png"
-                  alt=""
-                />
+        <motion.div
+          whileTap={{
+            scale: 1.1,
+          }}
+          className="comboMeals"
+        >
+          <motion.div
+            //make wodth smaller on seelection
+            animate={{
+              // width: selectedCombo ? "70%" : "100%",
+              // flexDirection: selectedCombo ? "row" : "column",
+              transition: {
+                duration: 0.2,
+                type: "spring",
+                stiffness: 80,
+                damping: 15,
+              },
+            }}
+            onClick={() => {
+              setSelectedCombo(true);
+              console.log(selectedCombo);
+            }}
+            className="wrapper_combo_meals"
+          >
+            <div className="mealContainor">
+              <div className="headerComboMeals">
+                <h2>Combo Meal</h2>
               </div>
-              <div className="price">${quantity * 1.23}</div>
-              <div
-                className="discount"
-                style={{
-                  color: "white",
-                  backgroundColor: "#c8161d",
+              <div className="containorProductInfo">
+                <div className="imagePart">
+                  <img
+                    src="https://d2mn2a9fb37v58.cloudfront.net/210_MAPPFR-6448-1-6448.png"
+                    alt=""
+                  />
+                </div>
+                <div className="price">$$6.26</div>
+                <div
+                  className="discount"
+                  style={{
+                    color: "white",
+                    backgroundColor: "#c8161d",
+                  }}
+                >
+                  20% Off
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            animate={{
+              opacity: selectedCombo ? 1 : 0,
+              // display: selectedCombo ? "" : "none",
+              x: selectedCombo ? 0 : -100,
+              display: selectedCombo ? "" : "none",
+              transition: {
+                duration: 0.2,
+                type: "spring",
+                stiffness: 80,
+                damping: 15,
+              },
+            }}
+            className="mealsItems"
+          >
+            <motion.div
+              whileTap={{
+                scale: 0.9,
+              }}
+              className="backButton_Container"
+            >
+              <motion.div
+                whileTap={{
+                  scale: 0.9,
+                }}
+                className="back"
+                onClick={() => {
+                  setSelectedCombo(false);
+                  console.log(selectedCombo);
                 }}
               >
-                20% Off
-              </div>
+                <HiChevronLeft />
+              </motion.div>
+            </motion.div>
+            <div className="wrapper_mealsItems">
+              <SideCardDrawer
+                nameSide="Small Meal"
+                priceSide="1.12"
+                backgroundColor="#fbfbf9"
+                imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MVGMCM-2770-1-2770.png"
+                addSide={() => {
+                  return false;
+                }}
+              />
+
+              <SideCardDrawer
+                nameSide="Medium Meal"
+                priceSide="1.12"
+                backgroundColor="#fbfbf9"
+                imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MSPCMM-5283-1-5283.png"
+                addSide={() => {
+                  return false;
+                }}
+              />
+
+              <SideCardDrawer
+                nameSide="Large Meal"
+                priceSide="1.12"
+                backgroundColor="#fbfbf9"
+                imageSide="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/228/MSPVMM-5295-1-5295.png"
+                addSide={() => {
+                  return false;
+                }}
+              />
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         <motion.div
           animate={{

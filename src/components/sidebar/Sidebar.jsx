@@ -126,7 +126,7 @@ const Sidebar = (props) => {
           <SidebarCard
             setDrinks={setBurgersAndWraps}
             productImage="https://s7d1.scene7.com/is/image/mcdonalds/Menu_LeftRail_mcd-160x160:category-panel-left-desktop"
-            title="Mc Backery"
+            title="Mc Bakery"
             discount="80% off"
           />
         </motion.div>

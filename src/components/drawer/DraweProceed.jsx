@@ -10,7 +10,7 @@ import "../../styles/drawer/DrawerProceed.css";
 //importing  the category cards
 import CartCards from "../../components/productCards/cartCards/CartCards";
 
-const DraweProceed = (props) => {
+const DrawerProceed = (props) => {
   //state for opening the closing of cart
   const [isCartOpen, setIsCartOpen] = useState(false);
 
@@ -202,4 +202,4 @@ const DraweProceed = (props) => {
   );
 };
 
-export default DraweProceed;
+export default DrawerProceed;

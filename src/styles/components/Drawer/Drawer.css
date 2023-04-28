@@ -227,12 +227,34 @@
   padding: 20px;
   display: flex;
   justify-content: center;
+  align-items: center ;
+  z-index: 999;
+  bottom: 0;
+  flex-direction: column;
+}
+.wrapper_combo_meals{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
   align-items: center;
   z-index: 999;
   bottom: 0;
+
+}
+.mealsItems{
+  min-height: 400px;
+  /* background-color: red; */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  bottom: 0;
+  flex-direction: column;
 }
 .mealContainor {
-  width: 70%;
+  width: 80%;
   padding: 10px;
   background-color: #efefef;
   border-radius: 10px;
@@ -240,10 +262,30 @@
   justify-content: space-between;
   align-items: center;
 }
+.wrapper_mealsItems{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+}
+.backButton_Container{
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .headerComboMeals {
   color: black;
   padding: 25px;
   font-weight: 800;
+}
+
+.back{
+  padding: 20px 20px 20px 20px;
+  background-color: #efefef;
+  border-radius: 30px;
 }
 
 .containorProductInfo {
