@@ -11,7 +11,12 @@ const CartCards = (props) => {
     <div
       className="wrapper_CartCard"
       onClick={() => {
-        props.openSidebar(true);
+        props.addItem({
+          title: props.title,
+          productImage: props.imageSide,
+          productName: props.title,
+        });
+        props.openSidebar ? props.openSidebar(true) : props.openSidebar(false);
       }}
     >
       <div className="crossSymbol">

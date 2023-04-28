@@ -181,6 +181,18 @@ const MainFrame = (props) => {
 
 
 
+//function to add the drawer items
+const addDrawerItem = (item) =>
+{
+  console.log(item);
+  const items = itemsSides;
+  items.push(item);
+  setItemsSide([...items]);
+  console.log(itemsSides);
+}
+
+
+
 
   //adding the items to cart
   const [cartItems, setCartItems] = useState([]);
@@ -432,28 +444,7 @@ const MainFrame = (props) => {
             <h5>Let's look at your cart</h5>
           </div> */}
           <div className="productCart_MainFrame">
-            {/* <CartCard
-              title="Fries"
-              imageSide="https://d2mn2a9fb37v58.cloudfront.net/90_MENU-4611-1-Sides-and-Dips.png"
-            />
-            <CartCard
-              title="Mc Puff"
-              priceSide="1.12"
-              backgroundColor="#fbfbf9"
-              imageSide="https://d2mn2a9fb37v58.cloudfront.net/90_MENU-4611-1-Sides-and-Dips.png"
-            />
-            <CartCard
-              title="Small Fries"
-              priceSide="1.12"
-              backgroundColor="#fbfbf9"
-              imageSide="https://d2mn2a9fb37v58.cloudfront.net/90_MENU-4611-1-Sides-and-Dips.png"
-            />
-            <CartCard
-              title="Large Fries"
-              priceSide="1.12"
-              backgroundColor="#fbfbf9"
-              imageSide="https://d2mn2a9fb37v58.cloudfront.net/90_MENU-4611-1-Sides-and-Dips.png"
-            /> */}
+            
 
             {cartItems.map((item, index) => (
               //motion children staggering
@@ -488,6 +479,7 @@ const MainFrame = (props) => {
                   imageSide={item.image}
                   removeItem={removeCartItem}
                   openSidebar={setIsDrawerOpen}
+                  addItem={addDrawerItem}
                 />
               </motion.div>
             ))}
