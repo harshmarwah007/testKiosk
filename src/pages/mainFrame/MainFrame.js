@@ -487,6 +487,7 @@ const MainFrame = (props) => {
                   backgroundColor="#fbfbf9"
                   imageSide={item.image}
                   removeItem={removeCartItem}
+                  openSidebar={setIsDrawerOpen}
                 />
               </motion.div>
             ))}

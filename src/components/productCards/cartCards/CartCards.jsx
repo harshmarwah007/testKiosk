@@ -8,7 +8,12 @@ const CartCards = (props) => {
   //remove item on click
 
   return (
-    <div className="wrapper_CartCard">
+    <div
+      className="wrapper_CartCard"
+      onClick={() => {
+        props.openSidebar(true);
+      }}
+    >
       <div className="crossSymbol">
         <AiFillCloseCircle
           onClick={() => {
@@ -18,10 +23,8 @@ const CartCards = (props) => {
         />
       </div>
 
-
       <div className="quantity_CartCard">
         <h5>{props.quantity}</h5>
-
       </div>
       <div className="containorCards">
         <div className="imageCart">
