@@ -8,3 +8,4 @@ export { default as OnlinePayment } from "./onlinePayment/OnlinePayment";
 export { default as PaymentSuccess } from "./finalSuccessPage/FinalPage";
 export { default as StartNow } from "./StartNow/StartNow";
 export { default as SelectOrder } from "./selectOrder/SelectOrder";
+export { default as SelectOrderRevamp} from "./SelectOrderRevamp/SelectOrderRevamp"

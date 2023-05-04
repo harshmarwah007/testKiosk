@@ -1,0 +1,8 @@
+version: "23"
+services:
+  app:
+    container_name: docker-kiosk-test
+    image: docker-kiosk-test
+    build: .
+    ports:
+      - "3000:80"

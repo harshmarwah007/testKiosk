@@ -1,0 +1,14 @@
+  name: "Deploy Test Kiosk on Docker"
+  run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+  on: 
+    push:
+      branches:
+        - main
+  jobs:
+    Explore-Github-Actions:
+      runs-on: ubuntu-latest
+      steps:
+        - name: "Echo the hello world message"
+          run: echo "Hello World"
+        - name: "List the files in the current directory"
+          run: ls -a
