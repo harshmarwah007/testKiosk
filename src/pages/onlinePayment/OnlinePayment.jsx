@@ -32,7 +32,7 @@ const OnlinePayment = () => {
       <div className="wrapperMiddle_OnlinePayment">
         <div className="information_OnlinePayment">
           <h1>Please have a look at the payment machine</h1>
-          <Oval height="100" width="100" color="white" secondaryColor="white" />
+          <Oval height="100" width="100" color="#c8161d" secondaryColor="#e9b1b2" />
         </div>
         <div className="buttonSuccess_OnlinePayment">
           <button

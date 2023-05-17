@@ -5,6 +5,7 @@ import "../../styles/paymentMethod/PaymentMethod.css";
 import { motion } from "framer-motion";
 //import navigate
 import { useNavigate } from "react-router-dom";
+import { AiFillCaretLeft } from "react-icons/ai";
 
 const PaymentMethod = () => {
   const navigate = useNavigate();
@@ -29,6 +30,10 @@ const PaymentMethod = () => {
       exit={{ transition: { duration: 0.8 } }}
       className="PaymentMethod"
     >
+      <div className="backButton ">
+        <AiFillCaretLeft /> Back
+
+      </div>
       <div className="logoChoose">
         <div className="logoChooseImage">
           <img
